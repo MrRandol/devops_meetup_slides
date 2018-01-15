@@ -15,7 +15,7 @@
 		-->
 		<div id="cover-footer" style="position:absolute;bottom: 0; left:0; right:0; width: 100%; height: 60px; background-color:#444">
 			<p style="line-height: 60px; vertical-align: middle; margin-top: 0;  margin-left: 25px; font-size: 0.35em;float: left">
-				Belgian DevOps Meetup - 2017/06/21 - Introduction to DevOps
+				2018/01/24
 			</p>
 			<img src="./assets/nalys.png" style="border: none; box-shadow: none; float: right; height: 60px; width: 60px; background: none;margin-right:50px" />
 		</div>
@@ -28,14 +28,7 @@
 				###########################################
 				-->
 				<section id="cover" data-timing="15">
-					<h2>An introduction to DevOps</h2>
-					<h4> - </h4>
-					<h4>Belgium DevOps Meetup</h4>
-
-
-					<aside class="notes">
-						- WELCOME <br/>
-					</aside>
+					<h2>You said DevOps ?</h2>
 				</section>
 
 				<section id="hi" data-timing="50" style="line-height:1.2em;">
@@ -46,6 +39,7 @@
 						<li>MAXIME CHOFFAT</li>
 						<ul style="margin-bottom: 0.8em;">
 							<li>IT Consultant <a href="https://twitter.com/nalysgroup">@NalysGroup</a></li>
+							<li><i class="fa fa-globe" aria-hidden="true"></i>GIS Developer</li>
 							<li>Agile & DevOps enthousiast</li>
 							<li><i class="fa fa-gamepad" aria-hidden="true"></i> Games lover</li>
 						</ul>
@@ -76,18 +70,16 @@
 						</div>
 
 					<aside class="notes">
-						==> What is Devops for YOU ? <== <br /><br />
-
-						-> Not gonna answer ! <br />
-						-> Give rough definition <br />
-						-> Everyone will build its own view <br />
-						-> Reason is (next slide)
+						Ask people their vision, are they familiar with the concept
 					</aside>
 				</section>
 
 				<section data-timing="5" id="devops-unique">
 					<i>DevOps is unique to everyone who practices it</i>
 					<aside class="notes">
+						"DevOps is about bringing people together" <br/>
+						"DevOps is about automation and Continuous Delivery"<br/>
+						"DevOps is about giving value to the customer"
 					</aside>
 				</section>
 
@@ -97,17 +89,15 @@
 						This presentation <b style="color:red;">will NOT</b> :
 					</h3>
 					<ul>
-						<li class="fragment">Be exhaustive</li>
 						<li class="fragment">Be objective</li>
-						<li class="fragment">Be a ready to use pack of solutions</li>
+						<li class="fragment">Be exhaustive</li>
+						<li class="fragment">Be a copy/paste pack of solutions</li>
 					</ul>
 
 					<aside class="notes">
-						- Exhaustive : A LOT to cover => entrypoints and main ideas <br/>
-						- Exhaustive : not really limited <br/>
-						- Objective : each one has it's own view <br/>
-						- Objective : this presentation is my point of view and me trying to give to you the most open way possible <br/>
-						- Ready to Use : as agility : CANNOT be applied by copy/paste
+						OBJECTIVE : Unique to everyone => subjective. <br/>
+						EXHAUSTIVE : I am far from knowing everything + this is an introduction, we cannot see everything
+						COPYPASTA : tightly linked to agility (see later), has to be tailer fitted
 					</aside>
 				</section>
 
@@ -117,13 +107,14 @@
 						This presentation <span style="color:green;"> will</span> :
 					</h3>
 					<ul>
-						<li class="fragment">Give a rough preview</li>
+						<li class="fragment">Give starting points to think on</li>
 						<li class="fragment">Try to answer "why" DevOps</li>
-						<li class="fragment">Clarify what it is or not</li>
+						<li class="fragment">Help you avoid some traps</li>
 					</ul>
 
 					<aside class="notes">
-						ORIGIN : comes from agility -> seen later
+						THINK : generate debate and discussions
+						TRAPS : like agile, lots of shortcuts and "fake news"
 					</aside>
 				</section>
 
@@ -142,29 +133,23 @@
 							<span>
 							DevOps" - <i>Patrick Debois, 2009 (<a href="www.jedi.be"> jedi.be </a>)</i>
 						</li>
-						<li class="fragment">Old concepts <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> New Trend</li>
+						<li class="fragment">Old concepts <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> formalized</li>
 					</ul>
 
 					<aside class="notes">
 						- "Agile Infrastructure" : Agile conference 2008 <br/>
-						  => agility reqires frequent delivery and quality checks => agile infrastructure <br/>
-
+						=> agility reqires frequent delivery and quality checks => agile infrastructure <br/>
+						=>DevOps is an extention of Agile
 						<br/>
-
-						- DevOps : After work/speaks with Andrew Shafer<br/>
-						(cf https://blog.newrelic.com/2014/05/16/devops-name/) <br/>
-
+						- DevOps : After work/small talks with Andrew Shafer<br/>
 						<br/>
-
-						- old concepts, caalyzed and aggregated into devops -> new
+						- old concepts, catalyzed and formalized into devops <br/>
 
 					</aside>
 				</section>
 
 				<section id="agile-infrastructure">
 					<h3>The Agile infrastructure</h3>
-
-
 					<div id="ai-business" class="fragment" data-fragment-index="2" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative">BUSINESS </div>
 
 					<div id="ai-agile" class="fragment" data-fragment-index="4" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> AGILE </div>
@@ -180,11 +165,11 @@
 					<img class="fragment" id="operational" data-fragment-index="3" src="./assets/operational.png" style="background: none;z-index: 11;left:0; top: 480px;height: 250px;position:absolute; border: none; box-shadow: none" />
 
 					<aside class="notes">
-						- Agility : here to reconcile management (business) and developers <br/>
-
-						- Devops : originally here to reconcile devs and ops in order to fulfill agility needs to have quality engineering (also on infra) <br/>
+						- Agile : here to reconcile management (business) and developers <br/>
+						- DevOps : originally here to reconcile devs and ops <br/>
+						Help get where agile tends to go with quality engineering<br/>
 						- <b>BOTH EXISTS IN ORDER TO IMPROVE THE BUSINESS LINE</b>
-						- Not necessary to have both <br/>
+						- Technically not necessary to have both <br/>
 					</aside>
 				</section>
 
@@ -228,11 +213,14 @@
 					</div>
 
 					<aside class="notes">
-						- different concerns <br/>
-						- different cultures <br/>
-						- dev = product ( improvements / features )<br/>
-						- ops = service ( backups / supervision ) <br/>
-						- same global objective : <br/>
+
+						HERE INSERT EXAMPLE OF BAD DEV (new feature for deathstar ?)
+
+
+						!= concerns & != cultures<br/>
+						- dev > product = improvements / features <br/>
+						- ops > service = backups / supervision  <br/>
+						- BUT same global objective : <br/>
 						-- system working from outside
 						-- client satisfaction
 
@@ -264,6 +252,8 @@
 						<li>DevOps is not about process/tools/etc, it's about business problems</li>
 						<li>Involve marketing, business, security, QA ...</li>
 						<li>It comes from project, but can be extended to the whole organisation</li>
+
+						<li>Take Github organization. Not "Agile", but everyone (even jurists, marketing) uses github => repos, issues, MR...</li>
 					</aside>
 				</section>
 
@@ -282,17 +272,16 @@
 
 					<h3>What it is not</h3>
 					<ul>
-						<li class="fragment"> Removing Ops</li>
-						<li class="fragment"> Just Tools</li>
-						<li class="fragment"> Just Culture</li>
-						<li class="fragment"> Just Devs and Ops</li>
-						<li class="fragment"> A full job title</li>
+						<li class="fragment">Removing Ops</li>
+						<li class="fragment">Just Tools</li>
+						<li class="fragment">Just Culture</li>
+						<li class="fragment">Just Devs and Ops</li>
+						<li class="fragment">A job title</li>
 					</ul>
 
 					<aside class="notes">
 						- this slide = Avoid confusion <br/>
 						- break preconceived idea <br/>
-						- NoOps : automation affects devs AND ops => work together and better
 					</aside>
 				</section>
 
@@ -390,36 +379,7 @@
 					var cloudInit = false;
 						function initCloud() {
 							var words = [
-								"Automation",
-								"Virtualization",
-								"Jenkins",
-								"Maven",
-								"Git",
-								"Docker",
-								"Cloud",
-								"Continuous Integration",
-								"Continuous Deployment",
-								"ElasticSearch",
-								"Monitoring",
-								"PaaS",
-								"IaaS",
-								"Vagrant",
-								"Ansible",
-								"Puppet",
-								"Chef",
-								"Gitlab",
-								"Process",
-								"Integration",
-								"Time To Market",
-								"AWS",
-								"Software",
-								"Bash",
-								"Agile",
-								"Infrastructure",
-								"Scripting",
-								"Monolith",
-								"Microservices",
-								"Toolchain"
+								"Automation", "Virtualization", "Jenkins", "Maven", "Git", "Docker", "Cloud", "Continuous Integration", "Continuous Deployment", "ElasticSearch", "Monitoring", "PaaS", "IaaS", "Vagrant", "Ansible", "Puppet", "Chef", "Gitlab", "Process", "Integration", "Time To Market", "AWS", "Software", "Bash", "Agile", "Infrastructure", "Scripting", "Monolith", "Microservices", "Toolchain"
 							];
 							var word_list = [];
 
@@ -435,12 +395,16 @@
 					</script>
 
 					<aside class="notes">
-						- A lot of words covering part of Devops <br/>
-						- Identify why => how => what <br/>
+						- A lot of keywords fitting into DevOps <br/>
 						- It all gets towards the implementation (toolchain and processes) <br/>
 						- insist on deployment, only part of it <br/>
 						- For example Continuous Delivery/deployment => use a beer truck vs use a beer pipeline <br/>
 					</aside>
+				</section>
+
+				<section id="goldenCircle" data-timing="100">
+					Add golden circle to emphasis choices 
+					why > how > what
 				</section>
 
 				<section id="toolchain" data-timing="100">
@@ -563,6 +527,28 @@
 					</aside>
 				</section>
 
+
+				<section id="code-review">
+					Code Review => Merge Requests		
+				</section>
+
+				<section id="git-flow">
+					Git Flow	
+				</section>
+
+				<section id="ci-cd">
+					Continuous Integration / Continuous Deployment					
+				</section>
+
+				<section id="microservices">
+					Microservices vs Monolith applications			
+				</section>
+
+				<section id="no-silver-bullet">
+					Ther is no "Silver Bullet", but tools and concepts to help you go to the right direction
+					It is up to you to take the best path for your team and your project.
+				</section>
+
 				<section id="flow-example">
 					<h3 style="margin-bottom: 10px">A flow example</h3>
 
@@ -647,6 +633,13 @@
 					</aside>
 				</section>
 
+				<section id="tldl" data-timing="10">
+					QUICK DEMO
+					=> Intégration de la présentation avec Jenkins ? 
+					Un petit service qui compte les clicks ? 
+					... => a faire tourner en docker vite fait bien fait
+				</section>
+
 				<!--
 				###########################################
 								CONCLUSION
@@ -662,6 +655,8 @@
 					<h4>1. Break Silos</h4>
 					<img id="thewall2" src="./assets/collaboration.jpg" style="border: none; box-shadow: none" />
 					<aside class="notes">
+						Make people work together, communicate
+						Teams are in the center, if they do not understand/want to change, no point
 					</aside>
 				</section>
 
@@ -669,23 +664,32 @@
 					<h4>2. Go iterative</h4>
 					<img id="thewall2" src="./assets/iterative.jpg" style="border: none; box-shadow: none" />
 					<aside class="notes">
-					</aside>
-				</section>
-
-				<section id="measure" data-timing="25">
-					<h4>3. Measure progress</h4>
-					<img id="thewall2" src="./assets/measure.jpg" style="border: none; box-shadow: none" />
-					<aside class="notes">
+						Do not bigbang anything, improve by small chunks
+						Decide to improve one thing in a short period of time, measure the improvement
+						If it fails, it is ok (cf next), just rollback and redo
 					</aside>
 				</section>
 
 				<section id="fail" data-timing="25">
-					<h4>4. It is ok to fail</h4>
+					<h4>3. It is ok to fail</h4>
 					<img id="thewall2" src="./assets/fail.jpg" style="border: none; box-shadow: none" />
 					<aside class="notes">
+						Something not working is not a failure, as long as you can fix it quick
+						Since iterative, easy to rollback and change direction
+						You learn from mistakes, as kids, if we never fall we never learn
 					</aside>
 				</section>
 
+				<section id="measure" data-timing="25">
+					<h4>4. Measure progress</h4>
+					<img id="thewall2" src="./assets/measure.jpg" style="border: none; box-shadow: none" />
+					<aside class="notes">
+						2 things :
+						- prove that you are improving
+						- get feedback on the state of the project
+					</aside>
+				</section>
+	
 				<section id="unique" data-timing="25">
 					<h4>5. DevOps is unique to your project</h4>
 					<img id="thewall2" src="./assets/unique.jpg" style="border: none; box-shadow: none" />
@@ -718,7 +722,6 @@
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://www.lemagit.fr/definition/DevOps">Le Mag IT</a></li>
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://blog.octo.com/devops/">Octo Blog</a></li>
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://www.jedi.be/">Jedi.be</a></li>
-
 						<li><i class="fa fa-flickr" aria-hidden="true"></i> <a href="https://www.flickr.com/">flickr</a></li>
 					</ul>
 				</section>
