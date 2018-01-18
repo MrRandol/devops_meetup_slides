@@ -10,18 +10,26 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background: #222;
-  background-color: #222; }
+  background-color: #222; 
+}
 
-.reveal {
-  font-family: Ubuntu, "sans-serif";
+.reveal, #footer {
+  font-family: "Source Sans Pro", "sans-serif";
   font-size: 40px;
   font-weight: normal;
-  color: #eee; }
+  color: #eee; 
+}
+
+#footer {
+  font-size: 35px;
+}
 
 ::selection {
   color: #fff;
@@ -49,7 +57,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee;
-  font-family: Ubuntu, "sans-serif";
+  font-family: "Source Sans Pro", "sans-serif";
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -75,6 +83,20 @@ body {
 /*********************************************
  * OTHER
  *********************************************/
+.todo {
+  position: fixed;
+  top: -200px;
+  left: 5px;
+  background: rgba(100, 100, 100, 0.5);
+}
+
+.agile-loop-text {
+  font-weight:bold; 
+  fill: #eeeeee;
+  font-size: 0.80em; 
+  letter-spacing: -2px;
+}
+
 .reveal p {
   margin: 20px 0;
   line-height: 1.3; }

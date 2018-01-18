@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/blood_custom.css">
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
 		<link rel="stylesheet" type="text/css" href="css/bubbles.css" />
@@ -13,11 +13,11 @@
 							SLIDES
 		###########################################
 		-->
-		<div id="cover-footer" style="position:absolute;bottom: 0; left:0; right:0; width: 100%; height: 60px; background-color:#444">
-			<p style="line-height: 60px; vertical-align: middle; margin-top: 0;  margin-left: 25px; font-size: 0.35em;float: left">
-				2018/01/24
+		<div id="footer" style="position:absolute;bottom: 0; left:0; right:0; width: 100%; height: 40px; background-color:#444">
+			<p style="line-height: 40px; vertical-align: middle; margin-top: 0;  margin-left: 25px; font-size: 0.35em;float: left">
+				2018.01.24 / You said DevOps ? / Maxime Choffat
 			</p>
-			<img src="./assets/nalys.png" style="border: none; box-shadow: none; float: right; height: 60px; width: 60px; background: none;margin-right:50px" />
+			<img src="./assets/nalys.png" style="border: none; box-shadow: none; float: right; height: 40px; width: 40px; background: none;margin-right:50px" />
 		</div>
 		<div class="reveal">
 			<div class="slides">
@@ -32,14 +32,14 @@
 				</section>
 
 				<section id="hi" data-timing="50" style="line-height:1.2em;">
-					<h2 style="margin-bottom: 35px;">Hi !</h2>
+					<h2 style="margin-bottom: 35px;">Maxime Choffat</h2>
 					<img id="hi" src="./assets/42.jpg" style="border: none; box-shadow: none; float: left; height: 300px; width: 300px; border-radius:50%;" />
 
 					<ul>
-						<li>MAXIME CHOFFAT</li>
+						
 						<ul style="margin-bottom: 0.8em;">
 							<li>IT Consultant <a href="https://twitter.com/nalysgroup">@NalysGroup</a></li>
-							<li><i class="fa fa-globe" aria-hidden="true"></i>GIS Developer</li>
+							<li><i class="fa fa-globe" aria-hidden="true"></i> GIS Developer</li>
 							<li>Agile & DevOps enthousiast</li>
 							<li><i class="fa fa-gamepad" aria-hidden="true"></i> Games lover</li>
 						</ul>
@@ -63,18 +63,22 @@
 				-->
 				<section data-timing="70" id="what-is-devops">
 					<div style="position: relative; width: 100%; height: 100px; vertical-align: middle; ">
-						<h4 style="position: absolute; z-index: 1; width: 100%; height: 100%; top:0; right:0; bottom:0; left:0; vertical-align: middle; line-height: 100px; ">
+						<h3 style="position: absolute; z-index: 1; width: 100%; height: 100%; top:0; right:0; bottom:0; left:0; vertical-align: middle; line-height: 100px; ">
 							What is DevOps ?
-						</h4>
+						</h3>
 						<div class="fragment" style="z-index: 2; position: absolute; left: 0; right: 0; font-size: 20px; width: 50%; left:25%; height: 100%; padding: 0; margin: 0; background: linear-gradient(to right top, transparent 48.5%, red, red, transparent 51.2%),linear-gradient(to left top, transparent 48.5%, red, red, transparent 51.5%);" ></div>
 						</div>
 
 					<aside class="notes">
-						Ask people their vision, are they familiar with the concept
+						Ask people their vision, are they familiar with the concept <br/>
+						Introduce (seen with tools) concept of golden circle
 					</aside>
 				</section>
 
 				<section data-timing="5" id="devops-unique">
+					<div class="todo">
+						review this catch slide ? display more than one quote ? 
+					</div>
 					<i>DevOps is unique to everyone who practices it</i>
 					<aside class="notes">
 						"DevOps is about bringing people together" <br/>
@@ -83,15 +87,14 @@
 					</aside>
 				</section>
 
-				<section data-timing="80" id="presentation-will-not">
-					<h3>
-						<img id="will-not" src="./assets/will-not.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" /> 
+				<section data-timing="80" id="presentation-will-not" data-background-image="./assets/will-not.png" data-background-size="70%">					<h3>
+						<!-- <img id="will-not" src="./assets/will-not.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" />  -->
 						This presentation <b style="color:red;">will NOT</b> :
 					</h3>
-					<ul>
-						<li class="fragment">Be objective</li>
-						<li class="fragment">Be exhaustive</li>
-						<li class="fragment">Be a copy/paste pack of solutions</li>
+					<ul class="fragment">
+						<li>Be objective</li>
+						<li>Be exhaustive</li>
+						<li>Be a copy/paste pack of solutions</li>
 					</ul>
 
 					<aside class="notes">
@@ -101,15 +104,18 @@
 					</aside>
 				</section>
 
-				<section data-timing="60" id="presentation-will">
+				<section data-timing="60" id="presentation-will" data-background-image="./assets/will.png" data-background-size="70%">
+					<div class="todo">
+						text too long, remove hopefully ? review formulation ?
+					</div>
 					<h3>
-						<img id="will" src="./assets/will.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" /> 
+						<!-- <img id="will" src="./assets/will.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" />  -->
 						This presentation <span style="color:green;"> will</span> :
 					</h3>
-					<ul>
-						<li class="fragment">Give starting points to think on</li>
-						<li class="fragment">Try to answer "why" DevOps</li>
-						<li class="fragment">Help you avoid some traps</li>
+					<ul class="fragment">
+						<li>Give starting points to think on and incentives (hopefully !)</li>
+						<li>Try to answer "why" DevOps</li>
+						<li>Help you avoid some traps</li>
 					</ul>
 
 					<aside class="notes">
@@ -118,58 +124,118 @@
 					</aside>
 				</section>
 
-				<section id="quick-history">
-					<h3>Quick history</h3>
-					<ul>
-						<li class="fragment">From <i>agility</i> to <i>"Agile Infrastructure"</i></li>
-						<li class="fragment" style="height:100%; line-height: 100%; vertical-align: middle;">
+				<section id="from-agile">
+					<h3>Frome <i>Agile</i>...</h3>
+					<svg width="1200" height="700" viewbox="0 0 1300 700" version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<!-- LOOP 1 -->
+						<path d="M 0 550 L 200 550 A 200 200, 0, 0, 0, 353 221 L 317 233 L 300 266 A 130 130, 0, 0, 1, 200 480 L 0 480 L 15 515 Z" fill="#ff2626"/>
+						<path id="design" d="M 397 385 A 200 200, 0, 0, 0, 353 221 L 317 233 L 300 266 A 130 130, 0, 0, 1, 328 373 L 364 364 Z" fill="#159dff" />
+						<path d="M 353 221 A 200 200, 0, 0, 0, 200 150 L 186 186 L 200 220 A 130 130, 0, 0, 1, 300 266 L 317 233 Z" fill="#d84c2d" />
+						<path d="M 200 150 A 200 200, 0, 0, 0, 47 221 L 65 255 L 100 266 A 130 130, 0, 0, 1, 200 220 L 186 186 Z" fill="#90be4f" />
+						<path d="M 47 221 A 200 200, 0, 0, 0, 3 385 L 41 393 L 72 373 A 130 130, 0, 0, 1, 100 266 L 65 255 Z" fill="#9249c9" />
+						<path d="M 3 385 A 200 200, 0, 0, 0, 200 550 L 425 550 L 440 515 L 425 480 L 200 480 A 130 130, 0, 0, 1, 72 373 L 41 393 Z" fill="#ffc715" />
 
-							<span style="width: 60px; height: 60px;">
-								<svg width="60" height="60" style="border-radius: 50%">
-									<rect x="0" y="0" width="21" height="60" style="fill:#000000);" />
-									<rect x="21" y="0" width="18" height="60" style="fill:#FAE042;" />
-									<rect x="39" y="0" width="21" height="60" style="fill:#ED2939" />
-								</svg>
-							<span>
-							DevOps" - <i>Patrick Debois, 2009 (<a href="www.jedi.be"> jedi.be </a>)</i>
-						</li>
-						<li class="fragment">Old concepts <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> formalized</li>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="525" dy="-25"><textPath xlink:href="#inner">PLAN</textPath></text>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="410" dy="-25"><textPath xlink:href="#inner">DESIGN</textPath></text>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="308" dy="-25"><textPath xlink:href="#inner">BUILD</textPath></text>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="200" dy="-25"><textPath xlink:href="#inner">TEST</textPath></text>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="68"  dy="-25"><textPath xlink:href="#inner">REVIEW</textPath></text>
+						<text class="agile-loop-text fragment" data-fragment-index="1" dx="880" dy="-25"><textPath xlink:href="#inner">DELIVER</textPath></text>
+						<path id="inner" d="M 100 434 A 130 130 0, 1, 1 200 480 L 200 550 L 440 550" stroke="transparent" fill="transparent"/>
+
+						<!-- LOOP 2 -->
+						<path class="fragment" data-fragment-index="2" d="M 425 550 L 650 550 A 200 200, 0, 0, 0, 803 221 L 767 233 L 750 266 A 130 130, 0, 0, 1, 650 480 L 425 480 L 440 515 Z" fill="#ff2626"/>
+						<path class="fragment" data-fragment-index="2" d="M 847 385 A 200 200, 0, 0, 0, 803 221 L 767 233 L 750 266 A 130 130, 0, 0, 1, 778 373 L 814 364 Z" fill="#159dff" />
+						<path class="fragment" data-fragment-index="2" d="M 803 221 A 200 200, 0, 0, 0, 650 150 L 636 186 L 650 220 A 130 130, 0, 0, 1, 750 266 L 767 233 Z" fill="#d84c2d" />
+						<path class="fragment" data-fragment-index="2" d="M 650 150 A 200 200, 0, 0, 0, 497 221 L 515 255 L 550 266 A 130 130, 0, 0, 1, 650 220 L 636 186 Z" fill="#90be4f" />
+						<path class="fragment" data-fragment-index="2" d="M 497 221 A 200 200, 0, 0, 0, 453 385 L 491 393 L 522 373 A 130 130, 0, 0, 1, 550 266 L 515 255 Z" fill="#9249c9" />
+						<path class="fragment" data-fragment-index="2" d="M 453 385 A 200 200, 0, 0, 0, 650 550 L 875 550 L 890 515 L 875 480 L 650 480 A 130 130, 0, 0, 1, 522 373 L 491 393 Z" fill="#ffc715" />
+						
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="525" dy="-25"><textPath xlink:href="#inner2">PLAN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="410" dy="-25"><textPath xlink:href="#inner2">DESIGN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="308" dy="-25"><textPath xlink:href="#inner2">BUILD</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="200" dy="-25"><textPath xlink:href="#inner2">TEST</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="68"  dy="-25"><textPath xlink:href="#inner2">REVIEW</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="880" dy="-25"><textPath xlink:href="#inner2">DELIVER</textPath></text>
+						<path id="inner2" d="M 550 434 A 130 130 0, 1, 1 650 480 L 650 550 L 890 550" stroke="transparent" fill="transparent"/>
+						
+						<!-- LOOP 3 -->
+						<path class="fragment" data-fragment-index="2" d="M 875 550 L 1100 550 A 200 200, 0, 0, 0, 1253 221 L 1217 233 L 1200 266 A 130 130, 0, 0, 1, 1100 480 L 875 480 L 890 515 Z" fill="#ff2626"/>
+						<path class="fragment" data-fragment-index="2" d="M 1297 385 A 200 200, 0, 0, 0, 1253 221 L 1217 233 L 1200 266 A 130 130, 0, 0, 1, 1228 373 L 1264 364 Z" fill="#159dff" />
+						<path class="fragment" data-fragment-index="2" d="M 1253 221 A 200 200, 0, 0, 0, 1100 150 L 1086 186 L 1100 220 A 130 130, 0, 0, 1, 1200 266 L 1217 233 Z" fill="#d84c2d" />
+						<path class="fragment" data-fragment-index="2" d="M 1100 150 A 200 200, 0, 0, 0, 947 221 L 965 255 L 1000 266 A 130 130, 0, 0, 1, 1100 220 L 1086 186 Z" fill="#90be4f" />
+						<path class="fragment" data-fragment-index="2" d="M 947 221 A 200 200, 0, 0, 0, 903 385 L 941 393 L 972 373 A 130 130, 0, 0, 1, 1000 266 L 965 255 Z" fill="#9249c9" />
+						<path class="fragment" data-fragment-index="2" d="M 903 385 A 200 200, 0, 0, 0, 1100 550 L 1285 550 L 1300 515 L 1285 480 L 1100 480 A 130 130, 0, 0, 1, 972 373 L 941 393 Z" fill="#ffc715" />
+
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="525" dy="-25"><textPath xlink:href="#inner3">PLAN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="410" dy="-25"><textPath xlink:href="#inner3">DESIGN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="308" dy="-25"><textPath xlink:href="#inner3">BUILD</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="200" dy="-25"><textPath xlink:href="#inner3">TEST</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="68"  dy="-25"><textPath xlink:href="#inner3">REVIEW</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="2" dx="840" dy="-25"><textPath xlink:href="#inner3">DELIVER</textPath></text>
+						<path id="inner3" d="M 1000 434 A 130 130 0, 1, 1 1100 480 L 1100 550 L 1340 550" stroke="transparent" fill="transparent"/>
+					</svg>
+
+					<aside class="notes">
+						You can reverse plan & design => grooming w planning poker ... <br/>
+						You can reverse build & test => TDD .. <br/>
+						Review gives you Feedback => you adapt !
+						Agile is here to fix the tunnel effect, the "expectation vs reality"
+					</aside>
+				</section>
+
+				<section id="quick-history">
+					<h3>... to sluggish</h3>
+					<ul>
+						<li>Delivery</li>
+						<li>Feedback</li>
+						<li>Communication</li>
 					</ul>
 
 					<aside class="notes">
-						- "Agile Infrastructure" : Agile conference 2008 <br/>
-						=> agility reqires frequent delivery and quality checks => agile infrastructure <br/>
-						=>DevOps is an extention of Agile
+						Development loop >> frequent deliveries <br/>
+						>> Should be quick and easy => Fear of production<br/>
 						<br/>
-						- DevOps : After work/small talks with Andrew Shafer<br/>
+						Feedback need to be automated<br/>
+						Monitoring technical aspects (cpu, mem ...) or business (UAT, Integration ...) <br/>
+						Frequent quality checks<br/>
+						Being ABLE to change regarding feedback <br/>
 						<br/>
-						- old concepts, catalyzed and formalized into devops <br/>
-
+						Communication<br/>
+						Not the same language, departments<br/>
+						Distance of certain actors of the project
 					</aside>
 				</section>
 
 				<section id="agile-infrastructure">
 					<h3>The Agile infrastructure</h3>
-					<div id="ai-business" class="fragment" data-fragment-index="2" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative">BUSINESS </div>
+					<div id="ai-business" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative">BUSINESS </div>
 
-					<div id="ai-agile" class="fragment" data-fragment-index="4" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> AGILE </div>
+					<div id="ai-agile" class="fragment" data-fragment-index="2" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> AGILE </div>
 
 					<div id="ai-dev" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative"> DEVELOPMENT </div>
 
-					<div id="ai-devops" class="fragment" data-fragment-index="5" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> DEVOPS </div>
+					<div id="ai-devops" class="fragment" data-fragment-index="3" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> DEVOPS </div>
 
-					<div id="ai-ops" class="fragment" data-fragment-index="3" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative"> OPERATIONS </div>
+					<div id="ai-ops" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative"> OPERATIONS </div>
 
-					<img class="fragment" id="business" data-fragment-index="2" src="./assets/business.png" style="background: none;z-index: 11;left:0; top: 80px;height: 250px;position:absolute; border: none; box-shadow: none" />
+					<img class="fragment" id="business" data-fragment-index="1" src="./assets/business.png" style="background: none;z-index: 11;left:0; top: 80px;height: 250px;position:absolute; border: none; box-shadow: none" />
 					<img class="fragment" id="developer" data-fragment-index="1" src="./assets/developer.png" style="background: none;z-index: 11;right:0; top: 280px;height: 250px;position:absolute; border: none; box-shadow: none" />
-					<img class="fragment" id="operational" data-fragment-index="3" src="./assets/operational.png" style="background: none;z-index: 11;left:0; top: 480px;height: 250px;position:absolute; border: none; box-shadow: none" />
+					<img class="fragment" id="operational" data-fragment-index="1" src="./assets/operational.png" style="background: none;z-index: 11;left:0; top: 480px;height: 250px;position:absolute; border: none; box-shadow: none" />
 
 					<aside class="notes">
-						- Agile : here to reconcile management (business) and developers <br/>
-						- DevOps : originally here to reconcile devs and ops <br/>
-						Help get where agile tends to go with quality engineering<br/>
-						- <b>BOTH EXISTS IN ORDER TO IMPROVE THE BUSINESS LINE</b>
-						- Technically not necessary to have both <br/>
+						"Agile Infrastructure" : Agile conference 2008 <br/>
+						Term <b>DevOps</b> arrived a bit later <br/>
+						<i>Patrick Debois, 2009 (<a href="www.jedi.be"> jedi.be </a>)</i> <br/>
+						After work/small talks with Andrew Shafer <br/>
+						Old concepts & good practices catalyzed & formalized <br/>
+						Idea : good practices & quality engineering EVERYWHERE <br/>
+						      >> ease process along the whole chain<br/>
+						<br/>
+						Agile => problem "moved between" dev & ops <br/>
+						(at least visible part between)<br/>
+						<br />
+						"DevOps is an ''Extention'' of Agile"
 					</aside>
 				</section>
 
@@ -186,7 +252,6 @@
 						<img id="operational" src="./assets/operational.png" style="position: absolute; right: 200px; bottom: 55px; background: none; height: 300px; border: none; box-shadow: none" />
 						<p style="position:absolute; bottom: 0; right: 160px; width: 250px; text-align: center;font-weight: bold; font-size: 0.7em">OPERATIONAL</p>
 
-
 						<svg class="fragment" data-fragment-index="1" viewbox="0 0 525 425" height="250px" width="280px" version="1.1" style="position: absolute; left: 0; transform: scale(-1, 1); top: 36px;">
 							<path style="stroke:black; stroke-linejoin:round; stroke-width:3px; stroke:#ddd; fill:none"
 								d="M 72.140014,391.37082 L 113.90529,296.44975 C 87.508191,275.83832 40.499658,243.29395 41.222865,182.54446 C 40.834139,90.934537 165.68205,33.400040 263.06697,34.467593 C 392.52123,34.286792 490.51593,101.90676 490.33513,182.00206 C 490.15433,290.48329 338.64222,360.99608 183.87568,323.57006 z " />
@@ -196,9 +261,8 @@
 								d="M 72.140014,391.37082 L 113.90529,296.44975 C 87.508191,275.83832 40.499658,243.29395 41.222865,182.54446 C 40.834139,90.934537 165.68205,33.400040 263.06697,34.467593 C 392.52123,34.286792 490.51593,101.90676 490.33513,182.00206 C 490.15433,290.48329 338.64222,360.99608 183.87568,323.57006 z " />
 						</svg>
 
-
-						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 75px; left: 40px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want change !</p>
-						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 75px; right: 38px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want stability !</p>
+						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 105px; left: 40px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want change !</p>
+						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 105px; right: 38px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want stability !</p>
 
 						<p class="fragment current-visible" data-fragment-index="2" style="position:absolute; top: 105px; left: 40px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">CATCH !</p>
 						<p class="fragment current-visible" data-fragment-index="2" style="position:absolute; top: 105px; right: 38px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">WHAT ?</p>
@@ -221,7 +285,7 @@
 						- dev > product = improvements / features <br/>
 						- ops > service = backups / supervision  <br/>
 						- BUT same global objective : <br/>
-						-- system working from outside
+						-- system working
 						-- client satisfaction
 
 						- those are the "original" facts
@@ -230,7 +294,7 @@
 				</section>
 
 
-				<section id="problem-location" data-timing="40">
+				<section id="not-only-dev-and-ops" data-timing="40">
 					<i>A problem occuring between devs and ops might find it's solution elsewhere</i>
 					<aside class="notes">
 						-Think about the wall <br/>
@@ -241,26 +305,21 @@
 				</section>
 
 				<section id="not-only" data-timing="40">
-					<h3>But not only !</h3>
+					<h3>It is not (only) about devs and ops</h3>
 					<ul>
-						<li class="fragment" data-fragment-index="1">Solve business problems</li>
-						<li class="fragment" data-fragment-index="2">Break silos</li>
-						<li class="fragment" data-fragment-index="2">Involve everyone</li>
-						<li class="fragment" data-fragment-index="3">Deliver faster, collaborate faster</li>
+						<li>Everyone on the project is involved</li>
+						<li>Management, QA, Security, Infra, etc ...</li>
+						<li>Involve everyone</li>
+						<li>It aims at <b>solving business problems</b></li>
 					</ul>
 					<aside class="notes">
-						<li>DevOps is not about process/tools/etc, it's about business problems</li>
-						<li>Involve marketing, business, security, QA ...</li>
-						<li>It comes from project, but can be extended to the whole organisation</li>
-
 						<li>Take Github organization. Not "Agile", but everyone (even jurists, marketing) uses github => repos, issues, MR...</li>
 					</aside>
 				</section>
 
 				<section id="be-careful" data-timing="10" data-transition="fade-out slide-in">
-
+					<h3>Some traps</h3>
 					<img id="careful" src="./assets/careful.jpg" style="border: none; box-shadow: none; height: 95%" />
-
 					<aside class="notes">
 						<li>there is a phantom menace</li>
 						<li>of preconceived ideas</li>
@@ -293,6 +352,9 @@
 							<li class="fragment" >Increased quality</li>
 							<li class="fragment" >Reduced frustration</li>
 							<li class="fragment" >Reduced Time To Market</li>
+							<li class="fragment">Solve business problems</li>
+							<li class="fragment">Break silos, involve everyone</li>
+							<li class="fragment">Deliver faster, collaborate faster</li>
 						</ul>
 					<aside class="notes">
 						-> Emphathize this ! <br />
@@ -356,6 +418,10 @@
 				-->
 
 				<section id="tools" data-timing="40">
+
+					<div class="toto">
+						tools = part of what
+					</div>
 					<h3>Tools</h3>
 					<img id="ultimate-weapon" src="./assets/ultimate-weapon.jpg" style="border: none; box-shadow: none; height: 85%" />
 					<aside class="notes">
@@ -718,11 +784,13 @@
 				<section id="sources" data-timing="5">
 					<h4 style="padding-bottom: 40px;">Sources</h4>
 					<ul style="list-style-type: none; font-size: 40px;">
+						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://www.jedi.be/">Jedi.be</a></li>
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="https://theagileadmin.com/what-is-devops/">The agile admin</a></li>
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://www.lemagit.fr/definition/DevOps">Le Mag IT</a></li>
 						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://blog.octo.com/devops/">Octo Blog</a></li>
-						<li><i class="fa fa-rss" aria-hidden="true"></i> <a href="http://www.jedi.be/">Jedi.be</a></li>
 						<li><i class="fa fa-flickr" aria-hidden="true"></i> <a href="https://www.flickr.com/">flickr</a></li>
+						<li><i class="fa fa-flickr" aria-hidden="true"></i> <a href="https://aws.amazon.com">AWS Amazon</a></li>
+						<li><i class="fa fa-flickr" aria-hidden="true"></i> <a href="https://www.atlassian.com/">Atlassian</a></li>
 					</ul>
 				</section>
 
@@ -826,11 +894,11 @@
 					initCloud();
 					cloudInit = true;
 				}
-				if (event.currentSlide.id === "cover") {
-					$("#cover-footer").show();
+				/*if (event.currentSlide.id === "cover") {
+					$("#footer").show();
 				} else {
-					$("#cover-footer").hide();
-				}
+					$("#footer").hide();
+				}*/
 			} );
 		</script>
 	</body>
