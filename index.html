@@ -18,7 +18,7 @@
 				2018.01.24 / You said DevOps ? / Maxime Choffat
 			</p>
 			<img src="./assets/nalys.png" style="border: none; box-shadow: none; float: right; height: 40px; width: 40px; background: none;margin-right:50px" />
-			<img src="./assets/wemanity.png" style="border: none; box-shadow: none; float: right; height: 40px; width: 40px; background: none;margin-right:5px" />
+			<img src="./assets/wemanity.png" style="border: none; box-shadow: none; float: right; height: 30px; margin-top:5px; background: none;margin-right:5px" />
 		</div>
 		<div class="reveal">
 			<div class="slides">
@@ -77,9 +77,6 @@
 				</section>
 
 				<section data-timing="5" id="devops-unique">
-					<div class="todo">
-						review this catch slide ? display more than one quote ? 
-					</div>
 					<i>DevOps is unique to everyone who practices it</i>
 					<aside class="notes">
 						"DevOps is about bringing people together" <br/>
@@ -106,15 +103,12 @@
 				</section>
 
 				<section data-timing="60" id="presentation-will" data-background-image="./assets/will.png" data-background-size="70%">
-					<div class="todo">
-						text too long, remove hopefully ? review formulation ?
-					</div>
 					<h3>
 						<!-- <img id="will" src="./assets/will.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" />  -->
 						This presentation <span style="color:green;"> will</span> :
 					</h3>
 					<ul class="fragment">
-						<li>Give starting points to think on and incentives (hopefully !)</li>
+						<li>Give a basis for relection</li>
 						<li>Try to answer "why" DevOps</li>
 						<li>Help you avoid some traps</li>
 					</ul>
@@ -126,7 +120,7 @@
 				</section>
 
 				<section id="from-agile">
-					<h3>Frome <i>Agile</i>...</h3>
+					<h3>From <i>Agile</i>...</h3>
 					<svg width="1200" height="700" viewbox="0 0 1300 700" version="1.1" xmlns="http://www.w3.org/2000/svg">
 						<!-- LOOP 1 -->
 						<path d="M 0 550 L 200 550 A 200 200, 0, 0, 0, 353 221 L 317 233 L 300 266 A 130 130, 0, 0, 1, 200 480 L 0 480 L 15 515 Z" fill="#ff2626"/>
@@ -297,7 +291,7 @@
 
 				<section id="not-only-dev-and-ops" data-timing="40">
 					<h3>It is not (only) about devs and ops</h3>
-					<i>A problem occuring between devs and ops might find it's solution elsewhere</i>
+					<i>A problem occuring between devs and ops might find its solution elsewhere</i>
 					<aside class="notes">
 						-Think about the wall <br/>
 						=> a business throwing specs and sold stuff to devs <br/>
@@ -448,6 +442,7 @@
 					<ul class="fragment">
 						<li>Complexity layer</li>
 						<li>Learning curve</li>
+						<li>Time</li>
 						<li>Cost</li>
 					</ul>
 					<aside class="notes">
@@ -475,7 +470,7 @@
 						</svg>
 
 						<ul class="fragment" data-fragment-index="2" style="position:absolute; top:10; right: 20;width:375; font-size: 0.8em;">
-							<li>team in the center</li>
+							<li>team centered</li>
 							<li>learning culture</li>
 							<li>communication & transparency</li>
 							<li>trust & responsability</li>
@@ -493,7 +488,7 @@
 							<li>automate</li>
 						</ul>
 						<ul class="fragment" data-fragment-index="7" style="position:absolute; top:300; left: 20; width:250; font-size: 0.8em;text-align: right;direction: rtl; ">
-							<li>centralize docs & issues</li>
+							<li>support culture and process</li>
 							<li>avoid duplicates</li>
 							<li>choose tools</li>
 							<li>use the apis</li>
@@ -528,6 +523,7 @@
 						<li>People & Culture > Process > Tools</li>
 					</ul>
 					<aside class="notes">
+						QUESTIONS ?
 					</aside>
 				</section>
 
@@ -706,15 +702,69 @@
 				</section>
 
 				<section id="scm">
-					<div class="todo">
-						Add git branch drawing to explain a flow ?
-					</div>
 					<h3>Source Code Management</h3>
-					<ul>
+					<!-- <ul>
 						<li>Git flow / feature branching</li>
 						<li>Merge Request</li>
 						<li>Code review</li>
-					</ul>
+					</ul> -->
+
+						<svg width="1200" height="400" viewbos="0 0 1200 500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+							<path d="M 100 50 C 200 180, 150 200, 350 200" stroke="#159dff" stroke-width="8px" fill="transparent"/>
+							<path d="M 800 200 C 950 200, 900 180, 1050 50" stroke="#159dff" stroke-width="8px" fill="transparent"/>
+							<line x1="30" x2="1170" y1="50" y2="50" stroke="#cccccc" stroke-width="10px" opacity="0.5" />
+							<circle cx="100" cy="50" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="102" y="65" text-anchor="middle" fill="#eeeeee" style="font-size:45px; font-family: FontAwesome;">&#xf126;</text>
+							<line x1="350" x2="800" y1="200" y2="200" stroke="#159dff" stroke-width="8px" />
+							<circle cx="320" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="400" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="480" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<rect x="560" y="160" width="15" height="80" stroke="transparent" fill="#159dff" stroke-width="5" />
+							<circle cx="640" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="720" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="800" cy="200" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="798" y="210" text-anchor="middle" fill="#eeeeee" style="font-size:30px; font-family: FontAwesome;">&#xf1d8;</text>
+							<circle cx="1050" cy="50" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="1052" y="65" text-anchor="middle" fill="#eeeeee" style="font-size:45px; font-family: FontAwesome;">&#xf126;</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="1" cx="100" cy="50" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="1" x1="100" x2="100" y1="80" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="1" cx="100" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="1" x="120" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Feature Branch</text>
+
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="280" x2="520" y1="200" y2="200" stroke="#ff2626" stroke-width="8px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="320" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="400" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="480" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="280" x2="520" y1="240" y2="240" stroke="#ff2626" stroke-width="3px" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="400" x2="400" y1="240" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="400" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="2" x="420" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Commits</text>
+
+							<rect   class="fragment fade-out current-visible" data-fragment-index="3" x="560" y="160" width="15" height="80" stroke="transparent" fill="#ff2626" stroke-width="5" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="3" x1="567" x2="567" y1="250" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="3" cx="567" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="3" x="587" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Merge Request</text>
+
+							<text   class="fragment fade-out current-visible" data-fragment-index="4" x="680" y="170" text-anchor="middle" fill="#ff2626" style="font-size:45px; font-family: FontAwesome;">&#xf0e6;</text>
+							<line   class="fragment fade-out current-visible" data-fragment-index="4" x1="600" x2="760" y1="240" y2="240" stroke="#ff2626" stroke-width="3px" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="4" x1="680" x2="680" y1="240" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="4" cx="680" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="4" x="700" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Review Code</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="5" cx="800" cy="200" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="5" x1="800" x2="800" y1="230" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="5" cx="800" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="5" x="820" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Ship</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="6" cx="1050" cy="50" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="6" x1="1050" x2="1050" y1="80" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="6" cx="1050" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="6" x="1070" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Merge</text>
+
+
+						</svg>
 					<aside class="notes">
 						anyone can use git (example github even marketing & jurist use text files versionned in git)
 					</aside>
@@ -912,6 +962,7 @@
 				<section id="tldl" data-timing="10">
 					QUICK DEMO
 					<aside class="notes">
+						QUESTIONS BEFORE DEMO ?
 						=> Intégration de la présentation avec Jenkins ? 
 						Un petit service qui compte les clicks ? 
 						... => a faire tourner en docker vite fait bien fait
@@ -982,13 +1033,14 @@
 				-->
 
 				<section id="thank-you" data-timing="15">
-					<h2 style="line-height: 600px;">Thank you !</h2>
-					<p style="text-align: right;font-size: 0.8em;position: absolute;bottom:0; width:100%;"><i class="fa fa-rocket" aria-hidden="true"></i> Powered by <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></p>
+					<h2>Thank you !</h2>
+					<img id="rock" src="./assets/rock.jpg" style="border: none; box-shadow: none; height: 450px" />
+					<p style="text-align: right;font-size: 0.8em;position: absolute;bottom:-70; width:100%;"><i class="fa fa-rocket" aria-hidden="true"></i> Powered by <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></p>
 				</section>
 
 				<section id="ready-to-rock" data-timing="10">
 					<h4>Questions time</h4>
-					<img id="rock" src="./assets/rock.jpg" style="border: none; box-shadow: none; height: 84%" />
+					<img src="./assets/rotiexpress.png" style="border: none; box-shadow: none; height: 300px" />
 					<aside class="notes">
 					</aside>
 				</section>
