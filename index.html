@@ -1,83 +1,1146 @@
-<section id="flow-example">
-					<h3 style="margin-bottom: 10px">Some tools</h3>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood_custom.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
+	</head>
+	<body>
 
-					<div style="position:relative;">
+		<!--
+		###########################################
+							SLIDES
+		###########################################
+		-->
+		<div id="footer" style="position:absolute;bottom: 0; left:0; right:0; width: 100%; height: 40px; background-color:#444">
+			<p style="line-height: 40px; vertical-align: middle; margin-top: 0;  margin-left: 25px; font-size: 0.35em;float: left">
+				2018.01.24 / You said DevOps ? / Maxime Choffat
+			</p>
+			<img src="./assets/nalys.png" style="border: none; box-shadow: none; float: right; height: 40px; width: 40px; background: none;margin-right:50px" />
+			<img src="./assets/wemanity.png" style="border: none; box-shadow: none; float: right; height: 30px; margin-top:5px; background: none;margin-right:5px" />
+		</div>
+		<div class="reveal">
+			<div class="slides">
 
-						<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:220px; padding-top:10px; ">
-							<div class="fragment" data-fragment-index="1" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="git" src="./assets/git.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="mercurial" src="./assets/mercurial.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="2" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="junit" src="./assets/junit.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="selenium" src="./assets/selenium.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="3" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="artifactory" src="./assets/artifactory.png" style="margin:2px auto; display: block; background: none; height: 80px; border:none; box-shadow:none" />
-								<img id="nexus" src="./assets/nexus.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="4" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="ansible" src="./assets/ansible.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="puppet" src="./assets/puppet.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="5" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="vagrant" src="./assets/vagrant.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="docker" src="./assets/docker.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="6" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="elastic" src="./assets/elastic.png" style="margin:2px auto; display: block; background: none; width: 80px; border:none; box-shadow:none" />
-							</div>
+				<!--
+				###########################################
+								INTRO
+				###########################################
+				-->
+				<section id="cover" data-timing="15">
+					<h2>You said DevOps ?</h2>
+				</section>
+
+				<section id="hi" data-timing="50" style="line-height:1.2em;">
+					<h2 style="margin-bottom: 35px;">Maxime Choffat</h2>
+					<img id="hi" src="./assets/42.jpg" style="border: none; box-shadow: none; float: left; height: 300px; width: 300px; border-radius:50%;" />
+
+					<ul>
+						
+						<ul style="margin-bottom: 0.8em;">
+							<li>IT Consultant <a href="https://twitter.com/nalysgroup">@NalysGroup</a></li>
+							<li><i class="fa fa-globe" aria-hidden="true"></i> GIS Developer</li>
+							<li>Agile & DevOps enthusiast</li>
+							<li><i class="fa fa-gamepad" aria-hidden="true"></i> Games lover</li>
+						</ul>
+						<li>Contact :</li>
+						<ul>
+							<li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/Mr_Randol">Mr_Randol</a></li>
+							<li><i class="fa fa-github"  aria-hidden="true"></i> <a href="https://github.com/MrRandol">MrRandol</a></li>
+							<li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="mailto:maxime.choffat@gmail.com">maxime.choffat@gmail.com</a></li>
+						</ul>
+					</ul>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+				<!--
+				###########################################
+							PART 1 : DEFINITION
+				###########################################
+				-->
+				<section data-timing="70" id="what-is-devops">
+					<div style="position: relative; width: 100%; height: 100px; vertical-align: middle; ">
+						<h3 style="position: absolute; z-index: 1; width: 100%; height: 100%; top:0; right:0; bottom:0; left:0; vertical-align: middle; line-height: 100px; ">
+							What is DevOps ?
+						</h3>
+						<div class="fragment" style="z-index: 2; position: absolute; left: 0; right: 0; font-size: 20px; width: 50%; left:25%; height: 100%; padding: 0; margin: 0; background: linear-gradient(to right top, transparent 48.5%, red, red, transparent 51.2%),linear-gradient(to left top, transparent 48.5%, red, red, transparent 51.5%);" ></div>
 						</div>
 
-						<div style="width:1200px; height:100px; padding-top:10px; ">
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#159dff" stroke-width="5"></polygon>
-								<text x="44" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CREATE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#d84c2d" stroke-width="5"></polygon>
-								<text x="49" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >VERIFY</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#90be4f" stroke-width="5"></polygon>
-								<text x="34" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >PACKAGE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#9249c9" stroke-width="5"></polygon>
-								<text x="36" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >RELEASE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ff2626" stroke-width="5"></polygon>
-								<text x="20" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CONFIGURE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ffc715" stroke-width="5"></polygon>
-								<text x="31" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >MONITOR</text>
-							</svg>
-						</div>
+					<aside class="notes">
+						Ask people their vision, are they familiar with the concept <br/>
+						Introduce (seen with tools) concept of golden circle
+					</aside>
+				</section>
 
-						<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:110px; padding-top:10px; ">
-							<div class="fragment" data-fragment-index="7" style="float:left; width:398; height:110px; position:relative; text-align: center;">
-								<img id="gitlab" src="./assets/gitlab.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="bitbucket" src="./assets/bitbucket.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="github" src="./assets/github.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="7" style="float:left;width:196px; height:110px;position:relative">
-							</div>
-							<div class="fragment" data-fragment-index="8" style="float:left; width:597px; height:110px; position:relative; text-align: center;">
-								<img id="rancher" src="./assets/rancher.png" style="margin:2px auto; background: none; height: 80px; border:none; box-shadow:none" />
-								<img id="kubernetes" src="./assets/kubernetes.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="docker-swarm" src="./assets/docker-swarm.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-						</div>
-						<div class="fragment" data-fragment-index="9" style="position:relative;width:1200px; height:110px; background-color: #888; text-align: center; ">
-							<img id="jenkins" src="./assets/jenkins.png" style="margin:2px auto; background: none; height: 110px; border:none; box-shadow:none" />
-						</div>
+				<section data-timing="5" id="devops-unique">
+					<i>DevOps is unique to everyone who practices it</i>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-timing="80" id="presentation-will-not" data-background-image="./assets/will-not.png" data-background-size="70%">					<h3>
+						<!-- <img id="will-not" src="./assets/will-not.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" />  -->
+						This presentation <b style="color:red;">will NOT</b> :
+					</h3>
+					<ul class="fragment">
+						<li>Be objective</li>
+						<li>Be exhaustive</li>
+						<li>Be a copy/paste pack of solutions</li>
+					</ul>
+
+					<aside class="notes">
+						OBJECTIVE : Unique to everyone => subjective. <br/>
+						EXHAUSTIVE : I am far from knowing everything + this is an introduction, we cannot see everything
+						COPYPASTA : tightly linked to agility (see later), has to be tailer fitted
+					</aside>
+				</section>
+
+				<section data-timing="60" id="presentation-will" data-background-image="./assets/will.png" data-background-size="70%">
+					<h3>
+						<!-- <img id="will" src="./assets/will.png" style="height:100px; border: none; box-shadow: none; display:inline; margin:0" />  -->
+						This presentation <span style="color:green;"> will</span> :
+					</h3>
+					<ul class="fragment">
+						<li>Give a basis for reflection</li>
+						<li>Try to answer "why" DevOps</li>
+						<li>Help you avoid some traps</li>
+					</ul>
+
+					<aside class="notes">
+						THINK : generate debate and discussions
+						TRAPS : like agile, lots of shortcuts and "fake news"
+					</aside>
+				</section>
+
+				<section id="from-agile">
+					<h3>From <i>Agile</i>...</h3>
+					<svg width="1200" height="700" viewbox="0 0 1300 700" version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<!-- LOOP 1 -->
+						<path d="M 0 550 L 200 550 A 200 200, 0, 0, 0, 353 221 L 317 233 L 300 266 A 130 130, 0, 0, 1, 200 480 L 0 480 L 15 515 Z" fill="#ff2626"/>
+						<path id="design" d="M 397 385 A 200 200, 0, 0, 0, 353 221 L 317 233 L 300 266 A 130 130, 0, 0, 1, 328 373 L 364 364 Z" fill="#159dff" />
+						<path d="M 353 221 A 200 200, 0, 0, 0, 200 150 L 186 186 L 200 220 A 130 130, 0, 0, 1, 300 266 L 317 233 Z" fill="#d84c2d" />
+						<path d="M 200 150 A 200 200, 0, 0, 0, 47 221 L 65 255 L 100 266 A 130 130, 0, 0, 1, 200 220 L 186 186 Z" fill="#90be4f" />
+						<path d="M 47 221 A 200 200, 0, 0, 0, 3 385 L 41 393 L 72 373 A 130 130, 0, 0, 1, 100 266 L 65 255 Z" fill="#9249c9" />
+						<path d="M 3 385 A 200 200, 0, 0, 0, 200 550 L 425 550 L 440 515 L 425 480 L 200 480 A 130 130, 0, 0, 1, 72 373 L 41 393 Z" fill="#ffc715" />
+
+						<text class="agile-loop-text" dx="525" dy="-25"><textPath xlink:href="#inner">PLAN</textPath></text>
+						<text class="agile-loop-text" dx="410" dy="-25"><textPath xlink:href="#inner">DESIGN</textPath></text>
+						<text class="agile-loop-text" dx="308" dy="-25"><textPath xlink:href="#inner">BUILD</textPath></text>
+						<text class="agile-loop-text" dx="200" dy="-25"><textPath xlink:href="#inner">TEST</textPath></text>
+						<text class="agile-loop-text" dx="68"  dy="-25"><textPath xlink:href="#inner">REVIEW</textPath></text>
+						<text class="agile-loop-text" dx="880" dy="-25"><textPath xlink:href="#inner">DELIVER</textPath></text>
+						<path id="inner" d="M 100 434 A 130 130 0, 1, 1 200 480 L 200 550 L 440 550" stroke="transparent" fill="transparent"/>
+
+						<!-- LOOP 2 -->
+						<path class="fragment" data-fragment-index="1" d="M 425 550 L 650 550 A 200 200, 0, 0, 0, 803 221 L 767 233 L 750 266 A 130 130, 0, 0, 1, 650 480 L 425 480 L 440 515 Z" fill="#ff2626"/>
+						<path class="fragment" data-fragment-index="1" d="M 847 385 A 200 200, 0, 0, 0, 803 221 L 767 233 L 750 266 A 130 130, 0, 0, 1, 778 373 L 814 364 Z" fill="#159dff" />
+						<path class="fragment" data-fragment-index="1" d="M 803 221 A 200 200, 0, 0, 0, 650 150 L 636 186 L 650 220 A 130 130, 0, 0, 1, 750 266 L 767 233 Z" fill="#d84c2d" />
+						<path class="fragment" data-fragment-index="1" d="M 650 150 A 200 200, 0, 0, 0, 497 221 L 515 255 L 550 266 A 130 130, 0, 0, 1, 650 220 L 636 186 Z" fill="#90be4f" />
+						<path class="fragment" data-fragment-index="1" d="M 497 221 A 200 200, 0, 0, 0, 453 385 L 491 393 L 522 373 A 130 130, 0, 0, 1, 550 266 L 515 255 Z" fill="#9249c9" />
+						<path class="fragment" data-fragment-index="1" d="M 453 385 A 200 200, 0, 0, 0, 650 550 L 875 550 L 890 515 L 875 480 L 650 480 A 130 130, 0, 0, 1, 522 373 L 491 393 Z" fill="#ffc715" />
+						
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="525" dy="-25"><textPath xlink:href="#inner2">PLAN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="410" dy="-25"><textPath xlink:href="#inner2">DESIGN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="308" dy="-25"><textPath xlink:href="#inner2">BUILD</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="200" dy="-25"><textPath xlink:href="#inner2">TEST</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="68"  dy="-25"><textPath xlink:href="#inner2">REVIEW</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="880" dy="-25"><textPath xlink:href="#inner2">DELIVER</textPath></text>
+						<path id="inner2" d="M 550 434 A 130 130 0, 1, 1 650 480 L 650 550 L 890 550" stroke="transparent" fill="transparent"/>
+						
+						<!-- LOOP 3 -->
+						<path class="fragment" data-fragment-index="1" d="M 875 550 L 1100 550 A 200 200, 0, 0, 0, 1253 221 L 1217 233 L 1200 266 A 130 130, 0, 0, 1, 1100 480 L 875 480 L 890 515 Z" fill="#ff2626"/>
+						<path class="fragment" data-fragment-index="1" d="M 1297 385 A 200 200, 0, 0, 0, 1253 221 L 1217 233 L 1200 266 A 130 130, 0, 0, 1, 1228 373 L 1264 364 Z" fill="#159dff" />
+						<path class="fragment" data-fragment-index="1" d="M 1253 221 A 200 200, 0, 0, 0, 1100 150 L 1086 186 L 1100 220 A 130 130, 0, 0, 1, 1200 266 L 1217 233 Z" fill="#d84c2d" />
+						<path class="fragment" data-fragment-index="1" d="M 1100 150 A 200 200, 0, 0, 0, 947 221 L 965 255 L 1000 266 A 130 130, 0, 0, 1, 1100 220 L 1086 186 Z" fill="#90be4f" />
+						<path class="fragment" data-fragment-index="1" d="M 947 221 A 200 200, 0, 0, 0, 903 385 L 941 393 L 972 373 A 130 130, 0, 0, 1, 1000 266 L 965 255 Z" fill="#9249c9" />
+						<path class="fragment" data-fragment-index="1" d="M 903 385 A 200 200, 0, 0, 0, 1100 550 L 1285 550 L 1300 515 L 1285 480 L 1100 480 A 130 130, 0, 0, 1, 972 373 L 941 393 Z" fill="#ffc715" />
+
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="525" dy="-25"><textPath xlink:href="#inner3">PLAN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="410" dy="-25"><textPath xlink:href="#inner3">DESIGN</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="308" dy="-25"><textPath xlink:href="#inner3">BUILD</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="200" dy="-25"><textPath xlink:href="#inner3">TEST</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="68"  dy="-25"><textPath xlink:href="#inner3">REVIEW</textPath></text>
+						<text class="fragment agile-loop-text" data-fragment-index="1" dx="840" dy="-25"><textPath xlink:href="#inner3">DELIVER</textPath></text>
+						<path id="inner3" d="M 1000 434 A 130 130 0, 1, 1 1100 480 L 1100 550 L 1340 550" stroke="transparent" fill="transparent"/>
+					</svg>
+
+					<aside class="notes">
+						You can reverse plan & design => grooming w planning poker ... <br/>
+						You can reverse build & test => TDD .. <br/>
+						Review gives you Feedback => you adapt !
+						Agile is here to fix the tunnel effect, the "expectation vs reality"
+					</aside>
+				</section>
+
+				<section id="quick-history">
+					<h3>... to sluggish</h3>
+					<ul>
+						<li>Delivery</li>
+						<li>Feedback</li>
+						<li>Time and improvement</li>
+					</ul>
+
+					<aside class="notes">
+						Development loop >> frequent deliveries <br/>
+						>> Should be quick and easy => Fear of production<br/>
+						<br/>
+						Feedback need to be automated<br/>
+						Monitoring technical aspects (cpu, mem ...) or business (UAT, Integration ...) <br/>
+						Frequent quality checks<br/>
+						Being ABLE to change regarding feedback <br/>
+						<br/>
+						Communication<br/>
+						Not the same language, departments<br/>
+						Distance of certain actors of the project
+					</aside>
+				</section>
+
+				<section id="agile-infrastructure">
+					<h3>The Agile infrastructure</h3>
+					<div id="ai-business" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative">BUSINESS </div>
+
+					<div id="ai-agile" class="fragment" data-fragment-index="2" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> AGILE </div>
+
+					<div id="ai-dev" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative"> DEVELOPMENT </div>
+
+					<div id="ai-devops" class="fragment" data-fragment-index="3" style="z-index: 1; background-color: orange; margin: -130px auto; border-radius: 125px; width: 500px; height: 220px; vertical-align: middle; line-height: 220px;"> DEVOPS </div>
+
+					<div id="ai-ops" class="fragment" data-fragment-index="1" style="z-index: 10; background-color: darkslategray; margin: 68px 0; padding: 20px; position: relative"> OPERATIONS </div>
+
+					<img class="fragment" id="business" data-fragment-index="1" src="./assets/business.png" style="background: none;z-index: 11;left:0; top: 80px;height: 250px;position:absolute; border: none; box-shadow: none" />
+					<img class="fragment" id="developer" data-fragment-index="1" src="./assets/developer.png" style="background: none;z-index: 11;right:0; top: 280px;height: 250px;position:absolute; border: none; box-shadow: none" />
+					<img class="fragment" id="operational" data-fragment-index="1" src="./assets/operational.png" style="background: none;z-index: 11;left:0; top: 480px;height: 250px;position:absolute; border: none; box-shadow: none" />
+
+					<aside class="notes">
+						"Agile Infrastructure" : Agile conference 2008 <br/>
+						Term <b>DevOps</b> arrived a bit later <br/>
+						<i>Patrick Debois, 2009 (<a href="www.jedi.be"> jedi.be </a>)</i> <br/>
+						After work/small talks with Andrew Shafer <br/>
+						Old concepts & good practices catalyzed & formalized <br/>
+						Idea : good practices & quality engineering EVERYWHERE <br/>
+						      >> ease process along the whole chain<br/>
+						<br/>
+						Agile => problem "moved between" dev & ops <br/>
+						(at least visible part between)<br/>
+						<br />
+						"DevOps is an ''Extention'' of Agile"
+					</aside>
+				</section>
+
+				<section id="dev-and-ops" data-timing="50">
+					<h3 style="margin-bottom: 0;">A story about Devs and Ops</h3>
+
+					<div style="position: relative; width: 1200px; height: 620px;">
+						<img id="developer" src="./assets/developer.png" style="position: absolute; left: 200px; bottom: 55px; background: none; height: 300px; border: none; box-shadow: none" />
+						<p style="position:absolute; bottom: 0; left: 165px; width: 250px; text-align: center; font-weight: bold; font-size: 0.7em">DEVELOPER</p>
+						
+						<img id="wall1" src="./assets/wall.jpg" style="position: absolute; border: none; box-shadow: none; width: 155px; margin-right: auto; margin-left: auto; bottom: 0; left: 0; right: 0;" />
+						<p style="position:absolute; top: 120px; right: 0; left: 0; width: 100%; text-align: center;margin-right: auto; margin-left: auto; font-size: 0.7em">WALL OF CONFUSION</p>
+						
+						<img id="operational" src="./assets/operational.png" style="position: absolute; right: 200px; bottom: 55px; background: none; height: 300px; border: none; box-shadow: none" />
+						<p style="position:absolute; bottom: 0; right: 160px; width: 250px; text-align: center;font-weight: bold; font-size: 0.7em">OPERATIONAL</p>
+
+						<svg class="fragment" data-fragment-index="1" viewbox="0 0 525 425" height="250px" width="280px" version="1.1" style="position: absolute; left: 0; transform: scale(-1, 1); top: 36px;">
+							<path style="stroke:black; stroke-linejoin:round; stroke-width:3px; stroke:#ddd; fill:none"
+								d="M 72.140014,391.37082 L 113.90529,296.44975 C 87.508191,275.83832 40.499658,243.29395 41.222865,182.54446 C 40.834139,90.934537 165.68205,33.400040 263.06697,34.467593 C 392.52123,34.286792 490.51593,101.90676 490.33513,182.00206 C 490.15433,290.48329 338.64222,360.99608 183.87568,323.57006 z " />
+						</svg>
+						<svg class="fragment" data-fragment-index="1" viewbox="0 0 525 425" height="250px" width="280px" version="1.1" style="position: absolute; right: 0; top: 36px;">
+							<path style="stroke:black; stroke-linejoin:round; stroke-width:3px; stroke:#ddd; fill:none"
+								d="M 72.140014,391.37082 L 113.90529,296.44975 C 87.508191,275.83832 40.499658,243.29395 41.222865,182.54446 C 40.834139,90.934537 165.68205,33.400040 263.06697,34.467593 C 392.52123,34.286792 490.51593,101.90676 490.33513,182.00206 C 490.15433,290.48329 338.64222,360.99608 183.87568,323.57006 z " />
+						</svg>
+
+						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 105px; left: 40px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want change !</p>
+						<p class="fragment current-visible" data-fragment-index="1" style="position:absolute; top: 105px; right: 38px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">I want stability !</p>
+
+						<p class="fragment current-visible" data-fragment-index="2" style="position:absolute; top: 105px; left: 40px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">CATCH !</p>
+						<p class="fragment current-visible" data-fragment-index="2" style="position:absolute; top: 105px; right: 38px; width: 200px; text-align: center;font-weight: bold; font-size: 0.7em">WHAT ?</p>
+
+						<svg class="fragment current-visible" data-fragment-index="2" height="400" width="1200" version="1.1" style="position: absolute; right: 0; top: 0;">
+							<path stroke-dasharray="5,5" style="stroke:black; stroke-linejoin:round; stroke-width:3px; stroke:#ddd; fill:none"
+								d="M 320 200 Q 470 -0 710 85" />
+						</svg>
+
+						<svg class="fragment current-visible" data-fragment-index="2" height="100" width="100" viewBox="0 0 512 512" style="position: absolute; top: 50px; right: 400px;" fill="#ddd" ><path d="M505.122,245.073c-0.55-15.348-2.304-30.38-5.473-44.904H397.809v-17.961h35.923v-17.961h-71.846v-17.962h53.885v-17.961  h-17.962v-17.961h-35.923V92.399h17.962V74.438h-35.924V56.477h17.962V38.515V27.114C329.189,11.561,292.74,2.592,254.116,2.592  C118.264,2.592,7.87,110.385,3.104,245.073H505.122z M164.309,56.477c39.671,0,71.846,32.175,71.846,71.846  c0,39.683-32.175,71.846-71.846,71.846c-39.689,0-71.847-32.164-71.847-71.846C92.462,88.652,124.62,56.477,164.309,56.477"/><path d="M308.001,487.554h-17.962v-17.961h53.885v-17.962h17.962v-17.962h53.885v-17.961h17.961v-17.962h-35.923v-17.961h-53.885  v-17.962h35.924v-17.962h71.846V325.9h-35.923v-17.962h83.879c3.169-14.523,4.923-29.55,5.473-44.904H3.104  c4.765,134.7,115.16,242.481,251.012,242.481c18.522,0,36.52-2.14,53.885-5.929V487.554z"/></svg>
 
 					</div>
 
 					<aside class="notes">
-						example to show chaining of tools <br/>
-						again, not exhaustive, may not apply (entirely) to you
+
+						HERE INSERT EXAMPLE OF BAD DEV (new feature for deathstar ?)
+
+
+						!= concerns & != cultures<br/>
+						- dev > product = improvements / features <br/>
+						- ops > service = backups / supervision  <br/>
+						- BUT same global objective : <br/>
+						-- system working
+						-- client satisfaction
+
+						- those are the "original" facts
+						- DevOps is not limiting to that, wants to be open
 					</aside>
 				</section>
+
+
+				<section id="not-only-dev-and-ops" data-timing="40">
+					<h3>It is not (only) about devs and ops</h3>
+					<i>A problem occuring between devs and ops might find its solution elsewhere</i>
+					<aside class="notes">
+						-Think about the wall <br/>
+						=> a business throwing specs and sold stuff to devs <br/>
+						=> a QA throwing a "bug" back to devs <br/>
+						etc ...
+					</aside>
+				</section>
+
+				<section id="not-only" data-timing="40">
+					<h3>DevOps is about ...</h3>
+					<ul style="font-style:italic;">
+						<li class="fragment" data-fragment-index="1">bringing people together</li>
+						<li class="fragment" data-fragment-index="1">automation and continuous delivery</li>
+						<li class="fragment" data-fragment-index="1">giving value to the customer</li>
+						<li style="opacity: 0"/>
+						<li class="fragment" data-fragment-index="2">a lot of things</li>
+						<li class="fragment" data-fragment-index="2" style="color:#ff5555"><b>NOT</b> about a lot of things</li>
+					</ul>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section id="what-it-is-not" data-timing="60" data-background-image="./assets/trap.png" data-background-size="70%">
+
+					<h3>What it is not</h3>
+					<ul>
+						<li class="fragment">Just Devs and Ops</li>
+						<li class="fragment">Taking jobs away</li>
+						<li class="fragment">A separate team</li>
+						<li class="fragment">A top bottom approach</li>
+						<li class="fragment">(only) Tools or Culture</li>
+						<li class="fragment">A job title</li>
+					</ul>
+
+					<aside class="notes">
+						shortcups and traps to avoid <br/>
+						clarify preconceptions<br/>
+					</aside>
+				</section>
+
+				<section id="goldenCircle" data-timing="100">
+					<h3>The golden Circle</h3>
+					<svg height="500" width="500" viewbox="0 0 600 600" version="1.1">
+						<circle class="fragment" data-fragment-index="1" cx="300" cy="300" r="298" stroke="#cccccc" stroke-width="5" fill="transparent" />
+						<circle class="fragment" data-fragment-index="2" cx="300" cy="300" r="198" stroke="#cccccc" stroke-width="5" fill="transparent" />
+						<circle class="fragment" data-fragment-index="3" cx="300" cy="300" r="98"  stroke="#ff2626" stroke-width="5" fill="#ff2626" fill-opacity="0.5" />
+
+						<text class="fragment" data-fragment-index="1" x="300" y="570" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">WHAT</text>
+						<text class="fragment" data-fragment-index="2" x="300" y="460" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">HOW</text>
+						<text class="fragment" data-fragment-index="3" x="300" y="320" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">WHY</text>
+					</svg>
+
+					<div style="width:100%;">
+						<i style="float:right; font-size:0.7em">All credit goes to Simon Sinek</i>
+					</div>
+					<aside class="notes">
+						we know where devops comes from<br/>
+						we know devops looks cool<br/>
+						you'd like to know what to do.<br/>
+						Simon Sinek : start with why => ted talk<br/>
+					</aside>
+				</section>
+
+				<section id="so-why" data-timing="60">
+					<h3>The why</h3>
+					<div style="width:1200px; height: 700px; position: relative;">
+
+						<svg class="fragment" data-fragment-index="1" id="why-team" width="270" height="250" style="position:absolute; top:0; left:0;">
+							<image href="./assets/team.jpg" height="200" />
+							<text text-anchor="middle" x=135 y=240 fill="#159dff">TEAM</text>
+						</svg>
+						<svg class="fragment" data-fragment-index="2" width="300" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:270px">
+							<circle cx="10" cy="125" r="6" stroke="transparent" fill="#159dff"></circle>
+							<line x1="10" y1="125" x2="40" y2="125" style="stroke:#159dff; stroke-width:2"></line>
+							<line x1="40" y1="0" x2="40" y2="200" style="stroke:#159dff; stroke-width:2"></line>
+						</svg>
+						<div class="fragment" data-fragment-index="2" style="position: absolute; top:0; left: 270px; width: 300; height:250px;">
+							<ul style="font-size: 0.8em; margin-left: 80px">
+								<li>collaboration & trust</li>
+								<li>responsabilities</li>
+								<li>less frustration</li>
+								<li>motivation</li>
+							</ul>
+						</div>
+
+						<svg class="fragment" data-fragment-index="3" id="why-project" width="200" height="280" style="position:absolute; top:25; right:400;">
+							<image href="./assets/project.jpg" height="230" />
+							<text text-anchor="middle" x=100 y=270 fill="#d84c2d">PROJECT</text>
+						</svg>
+						<svg class="fragment" data-fragment-index="4" width="350" height="280" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:25;right:50">
+							<circle cx="10" cy="140" r="6" stroke="transparent" fill="#d84c2d"></circle>
+							<line x1="10" y1="140" x2="40" y2="140" style="stroke:#d84c2d; stroke-width:2"></line>
+							<line x1="40" y1="0" x2="40" y2="230" style="stroke:#d84c2d; stroke-width:2"></line>
+						</svg>
+						<div class="fragment" data-fragment-index="4" style="position: absolute; top:25; right: 50; width: 350; height:280px; ">
+							<ul style="font-size: 0.8em; margin-left: 70px">
+								<li>delivery speed</li>
+								<li>frequent features</li>
+								<li>quick fixes</li>
+								<li>quality & stability</li>
+								<li>downtime</li>
+							</ul>
+						</div>
+
+						<svg class="fragment" data-fragment-index="5" id="why-organization" width="270" height="280" style="position:absolute; bottom:110; right:0;">
+							<image href="./assets/organization.jpg" height="230" />
+							<text text-anchor="middle" x=135 y=270 fill="#90be4f">ORGANIZATION</text>
+						</svg>
+						<svg class="fragment" data-fragment-index="6" width="350" height="280" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; bottom:110;right:270">
+							<circle cx="340" cy="140" r="6" stroke="transparent" fill="#90be4f"></circle>
+							<line x1="340" y1="140" x2="310" y2="140" style="stroke:#90be4f; stroke-width:2"></line>
+							<line x1="310" y1="0" x2="310" y2="230" style="stroke:#90be4f; stroke-width:2"></line>
+						</svg>
+						<div class="fragment" data-fragment-index="6" style="position: absolute; bottom:110; right: 240; width: 400; height:280px;">
+							<ul style="font-size: 0.8em; margin-right:70px; text-align: right;direction: rtl; margin-top:40px;">
+								<li>communication</li>
+								<li>handle unexpected</li>
+								<li>time to market</li>
+							</ul>
+						</div>
+
+						<svg class="fragment" data-fragment-index="7" id="why-client" width="200" height="280" style="position:absolute; bottom:150; left:320;">
+							<image href="./assets/client.jpg" height="230" />
+							<text text-anchor="middle" x=100 y=270 fill="#9249c9">CLIENT</text>
+						</svg>
+						<svg class="fragment" data-fragment-index="8" width="320" height="280" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; bottom:150;left:0px">
+							<circle cx="310" cy="140" r="6" stroke="transparent" fill="#9249c9"></circle>
+							<line x1="310" y1="140" x2="290" y2="140" style="stroke:#9249c9; stroke-width:2"></line>
+							<line x1="290" y1="0" x2="290" y2="230" style="stroke:#9249c9; stroke-width:2"></line>
+						</svg>
+						<div class="fragment" data-fragment-index="8" style="position: absolute; bottom:150; left: 0px; width: 300; height:280px;">
+							<ul style="font-size: 0.8em; margin-right:50px; text-align: right;direction: rtl; margin-top:10px;">
+								<li>result & progress</li>
+								<li>awareness of events</li>
+								<li>satisfaction</li>
+							</ul>
+						</div>
+
+					</div>
+					<aside class="notes">
+						Communication: fluid & transparent (internally and/or w client or public)
+					</aside>
+				</section>
+
+				<section id="why-not" data-timing="60">
+					<h3>why not ?</h3>
+					<ul class="fragment">
+						<li>Complexity layer</li>
+						<li>Learning curve</li>
+						<li>Time</li>
+						<li>Cost</li>
+					</ul>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section id="how" data-timing="60">
+
+					<h3 style="margin-bottom: 50px">The how</h3>
+					<div style="width:1200px; height: 750px; position: relative;">
+						<svg height="500" width="500" viewbox="0 0 600 600" version="1.1" style="position:absolute; top:0; left:350">
+
+							<line class="fragment" data-fragment-index="4" x1="300" y1="115" x2="485" y2="485" style="stroke:#eeeeee; stroke-width:4"></line>
+							<line class="fragment" data-fragment-index="6" x1="485" y1="485" x2="115" y2="485" style="stroke:#eeeeee; stroke-width:4"></line>
+							<line class="fragment" data-fragment-index="6" x1="115" y1="485" x2="300" y2="115" style="stroke:#eeeeee; stroke-width:4"></line>
+							
+							<circle class="fragment" data-fragment-index="1" cx="300" cy="115" r="110" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<text class="fragment" data-fragment-index="1" x="300" y="125" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">CULTURE</text>
+
+							<circle class="fragment" data-fragment-index="4" cx="485" cy="485" r="110" stroke="#cccccc" stroke-width="3" fill="#d84c2d" />
+							<text class="fragment" data-fragment-index="4" x="485" y="500" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">PROCESSES</text>
+							
+							<circle class="fragment" data-fragment-index="6" cx="115" cy="485" r="110" stroke="#cccccc" stroke-width="3" fill="#90be4f" />
+							<text class="fragment" data-fragment-index="6" x="115" y="500" width="200" fill="white" text-anchor="middle" style="font-size:40px;font-weight:bold;">TOOLS</text>
+						</svg>
+
+						<ul class="fragment" data-fragment-index="2" style="position:absolute; top:10; right: 20;width:375; font-size: 0.8em;">
+							<li>team centered</li>
+							<li>learning culture</li>
+							<li>communication & transparency</li>
+							<li>trust & responsability</li>
+						</ul>
+						<ul class="fragment" data-fragment-index="3" style="position:absolute; top:20; left: 0; width:375; font-size: 0.8em;text-align: right;direction: rtl; ">
+							<li>incentives</li>
+							<li>team building, lunchs, breakfasts, tech meetings ...</li>
+							<li><b><u>quality</u></b> is not an option</li>
+						</ul>
+
+						<ul class="fragment" data-fragment-index="5" style="position:absolute; top:300; right: 30;width:250; font-size: 0.8em;">
+							<li>take time</li>
+							<li>measure & monitor</li>
+							<li>adapt & improve</li>
+							<li>automate</li>
+						</ul>
+						<ul class="fragment" data-fragment-index="7" style="position:absolute; top:300; left: 20; width:250; font-size: 0.8em;text-align: right;direction: rtl; ">
+							<li>support culture and process</li>
+							<li>avoid duplicates</li>
+							<li>choose tools</li>
+							<li>use the apis</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						how -> how would you answer this question ? how do you see it ?
+						<ul>
+							<li>Take Github organization. Not "Agile", but everyone (even jurists, marketing) uses github => repos, issues, MR...</li>
+							- Break old habits <br/>
+							- Use incentives to change culture <br/>
+							- Measure and show progress to move towards employee hapinness <br/>
+							- remove notion of silo => not only<br/>
+						</ul>
+												like method boy scout, invest a day per week, explain how we improved gpp ?
+														<ul>
+						<li>Adapt process to team & project</li>
+						<li>Failure is not bad</li>
+						<li>Improve continuously</li>
+						<li>Allow improvement time</li>
+					</ul>
+			
+					</aside>
+				</section>
+
+				<section id="wrap-up" data-timing="60" data-transition="fade-out slide-in">
+					<h3>Wrap up</h3>
+					<ul>
+						<li>Everyone is involved</i></li>
+						<li>Go iterative</i></li>
+						<li>Measure team success</li>
+						<li>People & Culture > Process > Tools</li>
+					</ul>
+					<aside class="notes">
+						QUESTIONS ?
+					</aside>
+				</section>
+
+				<!--
+				###########################################
+						PART 2 : TOOLS/CONCEPTS
+				###########################################
+				-->
+
+				<section id="tools" data-timing="40">
+					<h3>Tools</h3>
+					<img id="ultimate-weapon" src="./assets/ultimate-weapon.jpg" style="border: none; box-shadow: none; height: 500px" />
+					<aside class="notes">
+						TOOLS = WHAT (part of)
+
+						- First some concepts arounf tooling <br/>
+						- Some examples of tools <br/>
+						- Quentin will detail concrete usages <br/>
+						- Mainly focused on dev (everything before release) and ops (everything from release) <br/>
+						- <b>Catalyzer of culture & processes </b> <br/>
+					</aside>
+				</section>
+
+				<section id="tools-concepts" data-timing="30">
+					<h3>A lot of magic keywords</h3>
+
+					<div id="wordcloud" style="width: 100%; height: 500px; position: relative;"></div>
+					<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+					<script type="text/javascript" src="js/jqcloud-1.0.4.js"></script>
+					<script>
+
+					var cloudInit = false;
+						function initCloud() {
+							var words = [
+								"Automation", "Virtualization", "Jenkins", "Maven", "Git", "Docker", "Cloud", "Continuous Integration", "Continuous Deployment", "ElasticSearch", "Monitoring", "PaaS", "IaaS", "Vagrant", "Ansible", "Puppet", "Chef", "Gitlab", "Process", "Integration", "Time To Market", "AWS", "Software", "Bash", "Agile", "Infrastructure", "Scripting", "Monolith", "Microservices", "Toolchain"
+							];
+							var word_list = [];
+
+							for (var i=0; i<words.length; i++) {
+								var new_word = {};
+								new_word.text = words[i];
+								new_word.weight = Math.floor((Math.random() * 10) + 1);
+								word_list.push(new_word);
+							}
+
+						  $("#wordcloud").jQCloud(word_list);
+						}
+					</script>
+
+					<aside class="notes">
+						- A lot of keywords fitting into DevOps <br/>
+						- It all gets towards the implementation (toolchain and processes) <br/>
+						- insist on deployment, only part of it <br/>
+						- For example Continuous Delivery/deployment => use a beer truck vs use a beer pipeline <br/>
+					</aside>
+				</section>
+
+				<section id="toolchain" data-timing="100">
+					<h3>The toolchain</h3>
+
+					<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:220px; padding-top:10px">
+						<div class="fragment" data-fragment-index="1" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; top:35; left:0">
+								<!-- create -->
+								<li>Code review</li>
+								<li>version control</li>
+								<li>merge ...</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="0" y1="140" x2="225" y2="140" style="stroke:#159dff;stroke-width:2"></line>
+								<line x1="110" y1="140" x2="110" y2="214" style="stroke:#159dff;stroke-width:2"></line>
+								<circle cx="110" cy="214" r="6" stroke="transparent" fill="#159dff" />
+							</svg>
+						</div>
+						<div class="fragment" data-fragment-index="4" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; top:35;padding-left:30px">
+								<!-- release -->
+								<li>Manage change</li>
+								<li>Validate</li>
+								<li>Automate</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="30" y1="140" x2="290" y2="140" style="stroke:#9249c9;stroke-width:2"></line>
+								<line x1="290" y1="140" x2="290" y2="214" style="stroke:#9249c9;stroke-width:2"></line>
+								<circle cx="290" cy="214" r="6" stroke="transparent" fill="#9249c9"></circle>
+							</svg>
+						</div>
+						<div class="fragment" data-fragment-index="5" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; top:25;">
+								<!-- configure -->
+								<li>Manage infrastructure</li>
+								<li>Infrastructure As Code</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="0" y1="100" x2="330" y2="100" style="stroke:#ff2626;stroke-width:2"></line>
+								<line x1="90" y1="100" x2="90" y2="214" style="stroke:#ff2626;stroke-width:2"></line>
+								<circle cx="90" cy="214" r="6" stroke="transparent" fill="#ff2626"></circle>
+							</svg>
+						</div>
+					</div>
+
+					<div style="width:1200px; height:100px; padding-top:10px">
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#159dff" stroke-width="5"></polygon>
+							<text x="44" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CREATE</text>
+						</svg>
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#d84c2d" stroke-width="5"></polygon>
+							<text x="49" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >VERIFY</text>
+						</svg>
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#90be4f" stroke-width="5"></polygon>
+							<text x="34" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >PACKAGE</text>
+						</svg>
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#9249c9" stroke-width="5"></polygon>
+							<text x="36" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >RELEASE</text>
+						</svg>
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ff2626" stroke-width="5"></polygon>
+							<text x="20" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CONFIGURE</text>
+						</svg>
+						<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ffc715" stroke-width="5"></polygon>
+							<text x="31" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >MONITOR</text>
+						</svg>
+					</div>
+
+					<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:220px; padding-top:0px">
+						<div class="fragment" data-fragment-index="2" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; bottom:20">
+								<!-- verify -->
+								<li>Functionnal</li>
+								<li>Performance</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="0" y1="130" x2="300" y2="130" style="stroke:#d84c2d;stroke-width:2"></line>
+								<line x1="300" y1="130" x2="300" y2="0" style="stroke:#d84c2d;stroke-width:2"></line>
+								<circle cx="300" cy="6" r="6" stroke="transparent" fill="#d84c2d"></circle>
+							</svg>
+						</div>
+						<div class="fragment" data-fragment-index="3" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; bottom:20">
+								<!-- package -->
+								<li>Articfacts storage</li>
+								<li>Staging</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="0" y1="130" x2="265" y2="130" style="stroke:#90be4f;stroke-width:2"></line>
+								<line x1="100" y1="130" x2="100" y2="0" style="stroke:#90be4f;stroke-width:2"></line>
+								<circle cx="100" cy="6" r="6" stroke="transparent" fill="#90be4f"></circle>
+							</svg>
+						</div>
+						<div class="fragment" data-fragment-index="6" style="float:left;width:398px; height:220px;position:relative">
+							<ul style="position:absolute; bottom:30">
+								<!-- monitor -->
+								<li>Performance & availability</li>
+								<li>Functionnal</li>
+								<li>End user</li>
+							</ul>
+							<svg width="398" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0;left:0">
+								<line x1="0" y1="90" x2="380" y2="90" style="stroke:#ffc715;stroke-width:2"></line>
+								<line x1="290" y1="90" x2="290" y2="0" style="stroke:#ffc715;stroke-width:2"></line>
+								<circle cx="290" cy="6" r="6" stroke="transparent" fill="#ffc715"></circle>
+							</svg>
+						</div>
+					</div>
+
+					<aside class="notes">
+						DO YOU KNOW WHAT IT IS ?
+						
+						=> chaining diffent tools together to make them more powerful <br/>
+						"generic flow" => you take what you need / add some and <b>adapt</b> it <br/><br/>
+
+					</aside>
+				</section>
+
+				<section id="scm">
+					<h3>Source Code Management</h3>
+					<!-- <ul>
+						<li>Git flow / feature branching</li>
+						<li>Merge Request</li>
+						<li>Code review</li>
+					</ul> -->
+
+						<svg width="1200" height="400" viewbos="0 0 1200 500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+							<path d="M 100 50 C 200 180, 150 200, 350 200" stroke="#159dff" stroke-width="8px" fill="transparent"/>
+							<path d="M 800 200 C 950 200, 900 180, 1050 50" stroke="#159dff" stroke-width="8px" fill="transparent"/>
+							<line x1="30" x2="1170" y1="50" y2="50" stroke="#cccccc" stroke-width="10px" opacity="0.5" />
+							<circle cx="100" cy="50" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="102" y="65" text-anchor="middle" fill="#eeeeee" style="font-size:45px; font-family: FontAwesome;">&#xf126;</text>
+							<line x1="350" x2="800" y1="200" y2="200" stroke="#159dff" stroke-width="8px" />
+							<circle cx="320" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="400" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="480" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<rect x="560" y="160" width="15" height="80" stroke="transparent" fill="#159dff" stroke-width="5" />
+							<circle cx="640" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="720" cy="200" r="20" stroke="#cccccc" stroke-width="3" fill="#159dff" />
+							<circle cx="800" cy="200" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="798" y="210" text-anchor="middle" fill="#eeeeee" style="font-size:30px; font-family: FontAwesome;">&#xf1d8;</text>
+							<circle cx="1050" cy="50" r="30" stroke="#cccccc" stroke-width="2" fill="#222222" />
+							<text x="1052" y="65" text-anchor="middle" fill="#eeeeee" style="font-size:45px; font-family: FontAwesome;">&#xf126;</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="1" cx="100" cy="50" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="1" x1="100" x2="100" y1="80" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="1" cx="100" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="1" x="120" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Feature Branch</text>
+
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="280" x2="520" y1="200" y2="200" stroke="#ff2626" stroke-width="8px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="320" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="400" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="480" cy="200" r="20" stroke="#ff2626" stroke-width="4" fill="#159dff" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="280" x2="520" y1="240" y2="240" stroke="#ff2626" stroke-width="3px" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="2" x1="400" x2="400" y1="240" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="2" cx="400" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="2" x="420" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Commits</text>
+
+							<rect   class="fragment fade-out current-visible" data-fragment-index="3" x="560" y="160" width="15" height="80" stroke="transparent" fill="#ff2626" stroke-width="5" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="3" x1="567" x2="567" y1="250" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="3" cx="567" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="3" x="587" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Merge Request</text>
+
+							<text   class="fragment fade-out current-visible" data-fragment-index="4" x="680" y="170" text-anchor="middle" fill="#ff2626" style="font-size:45px; font-family: FontAwesome;">&#xf0e6;</text>
+							<line   class="fragment fade-out current-visible" data-fragment-index="4" x1="600" x2="760" y1="240" y2="240" stroke="#ff2626" stroke-width="3px" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="4" x1="680" x2="680" y1="240" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="4" cx="680" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="4" x="700" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Review Code</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="5" cx="800" cy="200" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="5" x1="800" x2="800" y1="230" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="5" cx="800" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="5" x="820" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Ship</text>
+
+							<circle class="fragment fade-out current-visible" data-fragment-index="6" cx="1050" cy="50" r="30" stroke="#ff2626" stroke-width="3" fill="transparent" />
+							<line   class="fragment fade-out current-visible" data-fragment-index="6" x1="1050" x2="1050" y1="80" y2="350" stroke="#ff2626" stroke-width="3px" />
+							<circle class="fragment fade-out current-visible" data-fragment-index="6" cx="1050" cy="350" r=10 fill="#ff2626" />
+							<text   class="fragment fade-out current-visible" data-fragment-index="6" x="1070" y="358" text-anchor="start" fill="#eeeeee" style="font-size:30px;">Merge</text>
+
+
+						</svg>
+					<aside class="notes">
+						anyone can use git (example github even marketing & jurist use text files versionned in git)
+					</aside>
+				</section>
+
+				<section id="ci-cd">
+					<h3>Continuous Integration/Delivery/Deployment</h3>
+
+					<svg width="1200" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+						<polygon points="0 210 120 210 130 250 120 290 0 290 10 250" stroke="transparent" fill="#159dff"></polygon>
+						<line x1="60" y1="80" x2="160" y2="80" style="stroke:#159dff;stroke-width:2"></line>
+						<line x1="60" y1="190" x2="60" y2="80" style="stroke:#159dff;stroke-width:2"></line>
+						<circle cx="60" cy="190" r="6" stroke="transparent" fill="#159dff"></circle>
+						<text x="105" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Code</text>
+
+						<polygon points="150 210 270 210 280 250 270 290 150 290 160 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="210" y1="420" x2="70" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="210" y1="310" x2="210" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="210" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="140" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Unit tests</text>
+
+						<polygon points="300 210 420 210 430 250 420 290 300 290 310 250" stroke="transparent" fill="#90be4f"></polygon>
+						<line x1="360" y1="80" x2="460" y2="80" style="stroke:#90be4f;stroke-width:2"></line>
+						<line x1="360" y1="190" x2="360" y2="80" style="stroke:#90be4f;stroke-width:2"></line>
+						<circle cx="360" cy="190" r="6" stroke="transparent" fill="#90be4f"></circle>
+						<text x="405" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Build</text>
+
+						<polygon points="450 210 570 210 580 250 570 290 450 290 460 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="510" y1="420" x2="290" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="510" y1="310" x2="510" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="510" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="400" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Integration tests</text>
+
+						<polygon points="600 210 720 210 730 250 720 290 600 290 610 250" stroke="transparent" fill="#9249c9"></polygon>
+						<line x1="660" y1="80" x2="900" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<line x1="660" y1="190" x2="660" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<circle cx="660" cy="190" r="6" stroke="transparent" fill="#9249c9"></circle>
+						<text x="775" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Deploy to staging</text>
+
+						<polygon points="750 210 870 210 880 250 870 290 750 290 760 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="810" y1="420" x2="580" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="810" y1="310" x2="810" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="810" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="695" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Acceptance tests</text>
+
+						<polygon points="900 210 1020 210 1030 250 1020 290 900 290 910 250" stroke="transparent" fill="#9249c9"></polygon>
+						<line x1="960" y1="80" x2="1200" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<line x1="960" y1="190" x2="960" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<circle cx="960" cy="190" r="6" stroke="transparent" fill="#9249c9"></circle>
+						<text x="1075" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Deploy to prod</text>
+
+						<polygon points="1050 210 1170 210 1180 250 1170 290 1050 290 1060 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="1110" y1="420" x2="880" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="1110" y1="310" x2="1110" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="1110" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="995" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Production tests</text>
+
+						<!-- integration -->
+						<polygon class="fragment" data-fragment-index="1" points="90 230 180 230 190 250 180 270 90 270 100 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="1" points="240 230 330 230 340 250 330 270 240 270 250 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="1" points="390 230 480 230 490 250 480 270 390 270 400 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="540 230 630 230 640 250 630 270 540 270 550 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="690 230 780 230 790 250 780 270 690 270 700 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="840 230 930 230 940 250 930 270 840 270 850 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="990 230 1080 230 1090 250 1080 270 990 270 1000 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+
+						<!-- delivery -->
+						<polygon class="fragment" data-fragment-index="3" points="540 230 630 230 640 250 630 270 540 270 550 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="3" points="690 230 780 230 790 250 780 270 690 270 700 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+
+						<!-- deployment -->
+						<polygon class="fragment" data-fragment-index="4" points="840 230 930 230 940 250 930 270 840 270 850 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="4" points="990 230 1080 230 1090 250 1080 270 990 270 1000 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+
+
+					</svg>
+
+
+					<aside class="notes">
+						Take Github example : they can FIX an issue in prod in 25 minutes (fix not rollbacked)<br/>
+						Every developer can impact production but is also responsible<br/>
+						Small changes (a few lines a code, a non finished hidden feature, but working)<br/>
+						Tend towards feature toggling	
+					</aside>
+				</section>
+
+				<section id="containers">
+					<h3>VMs vs Containers</h3>
+					<svg width="1200" height="500" viewbos="0 0 1200 500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+						<!-- VMs -->
+						<rect x="20" y="430" width="560" height="70" stroke="transparent" fill="#159dff" stroke-width="5" />
+						<text x="300" y="472" text-anchor="middle" font-size="30" fill="#eeeeee">Host (hardware + OS)</text>
+
+						<rect x="20" y="340" width="560" height="70" stroke="transparent" fill="#159dff" stroke-width="5" />
+						<text x="300" y="382" text-anchor="middle" font-size="30" fill="#eeeeee">Hypervisor</text>
+
+						<rect x="35" y="250" width="150" height="70" stroke="transparent" fill="#d84c2d" stroke-width="5" />
+						<text x="110" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Guest OS</text>
+						<rect x="225" y="250" width="150" height="70" stroke="transparent" fill="#d84c2d" stroke-width="5" />
+						<text x="300" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Guest OS</text>
+						<rect x="410" y="250" width="150" height="70" stroke="transparent" fill="#d84c2d" stroke-width="5" />
+						<text x="485" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Guest OS</text>
+
+						<rect x="35" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="110" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+						<rect x="225" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="300" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+						<rect x="410" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="485" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+
+						<rect x="35" y="70" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="110" y="112" text-anchor="middle" font-size="30" fill="#eeeeee">APP1</text>
+						<rect x="225" y="70" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="300" y="112" text-anchor="middle" font-size="30" fill="#eeeeee">APP2</text>
+						<rect x="410" y="70" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="485" y="112" text-anchor="middle" font-size="30" fill="#eeeeee">APP3</text>
+
+						<text x="110" y="40" text-anchor="middle" font-size="30" fill="#eeeeee">VM1</text>
+						<text x="300" y="40" text-anchor="middle" font-size="30" fill="#eeeeee">VM2</text>
+						<text x="485" y="40" text-anchor="middle" font-size="30" fill="#eeeeee">VM3</text>
+						<rect x="23" y="55" width="180" height="280" stroke="#eeeeee" fill="transparent" stroke-width="3" />
+						<rect x="210" y="55" width="180" height="280" stroke="#eeeeee" fill="transparent" stroke-width="3" />
+						<rect x="398" y="55" width="180" height="280" stroke="#eeeeee" fill="transparent" stroke-width="3" />
+
+						<!-- CONTAINERS -->
+
+						<rect x="620" y="430" width="560" height="70" stroke="transparent" fill="#159dff" stroke-width="5" />
+						<text x="900" y="472" text-anchor="middle" font-size="30" fill="#eeeeee">Host (hardware + OS)</text>
+
+						<rect x="620" y="340" width="560" height="70" stroke="transparent" fill="#159dff" stroke-width="5" />
+						<text x="900" y="382" text-anchor="middle" font-size="30" fill="#eeeeee">Container Engine</text>
+
+						<rect x="635" y="250" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="710" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+						<rect x="825" y="250" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="900" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+						<rect x="1010" y="250" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="1090" y="292" text-anchor="middle" font-size="30" fill="#eeeeee">Bin/libs</text>
+
+						<rect x="635" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="710" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">APP1</text>
+						<rect x="825" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="900" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">APP2</text>
+						<rect x="1010" y="160" width="150" height="70" stroke="transparent" fill="#90be4f" stroke-width="5" />
+						<text x="1090" y="202" text-anchor="middle" font-size="30" fill="#eeeeee">APP3</text>
+
+
+					</svg>
+					<aside class="notes">
+						Often seen as "light" vm => isolated processes in the system.
+						Main advantage : code once run everywhere => yes, but .. (todo ?)
+					</aside>
+				</section>
+
+				<section id="microservices">
+					<h3>Microservices</h3>
+					<ul>
+						<li>Modular approach</li>
+						<li>Enforces CD & Monitoring</li>
+						<li>Scalabile</li>
+						<li>Mixed technologies</li>
+						<li>Fine grain (deploy, management ...)</li>
+					</ul>
+					<aside class="notes">
+						It is complex and might be difficult for new members or the team (and actual team too)
+					</aside>
+				</section>
+
+				<section id="no-silver-bullet">
+					<i>There is no Silver Bullet</i>
+				</section>
+
+				<section id="tldl" data-timing="10">
+					QUICK DEMO
+					<aside class="notes">
+						QUESTIONS BEFORE DEMO ?
+						=> Intégration de la présentation avec Jenkins ? 
+						Un petit service qui compte les clicks ? 
+						... => a faire tourner en docker vite fait bien fait
+					</aside>
+				</section>
+
+				<!--
+				###########################################
+								CONCLUSION
+				###########################################
+				-->
+				<section id="tldl" data-timing="10">
+					<h3>TL;DL in 5 points</h3>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section id="silos" data-timing="25" data-background-size="contain" data-background-image="./assets/collaboration.jpg">
+					<h4 style="background-color:rgba(0,0,0,0.9);">Break Silos</h4>
+					<!-- <img id="thewall2" src="./assets/collaboration.jpg" style="border: none; box-shadow: none" /> -->
+					<aside class="notes">
+						Make people work together, communicate
+						Teams are in the center, if they do not understand/want to change, no point
+					</aside>
+				</section>
+
+				<section id="iterative" data-timing="25" data-background-size="contain" data-background-image="./assets/iterative.jpg">
+					<h4 style="background-color:rgba(0,0,0,0.9);" >Go iterative</h4>
+					<!-- <img id="thewall2" src="./assets/iterative.jpg" style="border: none; box-shadow: none" /> -->
+					<aside class="notes">
+						Do not bigbang anything, improve by small chunks
+						Decide to improve one thing in a short period of time, measure the improvement
+						If it fails, it is ok (cf next), just rollback and redo
+					</aside>
+				</section>
+
+				<section id="fail" data-timing="25" data-background-size="contain" data-background-image="./assets/fail.jpg">
+					<h4 style="background-color:rgba(0,0,0,0.9);">It is ok to fail</h4>
+					<!-- <img id="thewall2" src="./assets/fail.jpg" style="border: none; box-shadow: none" /> -->
+					<aside class="notes">
+						Something not working is not a failure, as long as you can fix it quick
+						Since iterative, easy to rollback and change direction
+						You learn from mistakes, as kids, if we never fall we never learn
+					</aside>
+				</section>
+
+				<section id="measure" data-timing="25" data-background-size="contain" data-background-image="./assets/measure.jpg">
+					<h4 style="background-color:rgba(0,0,0,0.9);">Get feedback</h4>
+					<!-- <img id="thewall2" src="./assets/measure.jpg" style="border: none; box-shadow: none" /> -->
+					<aside class="notes">
+						2 things :
+						- prove that you are improving
+						- get feedback on the state of the project
+					</aside>
+				</section>
+	
+				<section id="unique" data-timing="25" data-background-size="contain" data-background-image="./assets/unique.jpg">
+					<h4 style="background-color:rgba(0,0,0,0.9);">DevOps is unique to your project</h4>
+					<!-- <img id="thewall2" src="./assets/unique.jpg" style="border: none; box-shadow: none" /> -->
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<!--
+				###########################################
+								CLOSING
+				###########################################
+				-->
+
+				<section id="thank-you" data-timing="15">
+					<h2>Thank you !</h2>
+					<img id="rock" src="./assets/rock.jpg" style="border: none; box-shadow: none; height: 450px" />
+					<p style="text-align: right;font-size: 0.8em;position: absolute;bottom:-70; width:100%;"><i class="fa fa-rocket" aria-hidden="true"></i> Powered by <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></p>
+				</section>
+
+				<section id="ready-to-rock" data-timing="10">
+					<h4>Questions time</h4>
+					<img src="./assets/rotiexpress.png" style="border: none; box-shadow: none; height: 300px" />
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section id="sources" data-timing="5">
+					<h4 style="padding-bottom: 40px;">Sources</h4>
+					<ul style="list-style-type: none; font-size: 40px;">
+						<li><a href="http://www.jedi.be/">Jedi.be</a></li>
+						<li><a href="https://theagileadmin.com/what-is-devops/">The agile admin</a></li>
+						<li><a href="http://www.lemagit.fr/definition/DevOps">Le Mag IT</a></li>
+						<li><a href="http://blog.octo.com/devops/">Octo Blog</a></li>
+						<li><a href="https://www.flickr.com/">flickr</a></li>
+						<li><a href="https://aws.amazon.com">AWS Amazon</a></li>
+						<li><a href="https://www.atlassian.com/">Atlassian</a></li>
+						<li>...</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+
+
+
+
+
+		<!--
+		###########################################
+						REVEAL INIT
+		###########################################
+		-->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				// Display controls in the bottom right corners
+				controls: false,
+				// Display a presentation progress bar
+				progress: true,
+				// Set default timing of 2 minutes per slide
+				defaultTiming: 70,
+				// Display the page number of the current slide
+				slideNumber: true,
+				// Push each slide change to the browser history
+				history: true,
+				// Enable keyboard shortcuts for navigation
+				keyboard: true,
+				// Enable the slide overview mode
+				overview: true,
+				// Vertical centering of slides
+				center: true,
+				// Enables touch navigation on devices with touch input
+				touch: false,
+				// Loop the presentation
+				loop: false,
+				// Change the presentation direction to be RTL
+				rtl: false,
+				// Randomizes the order of slides each time the presentation loads
+				shuffle: false,
+				// Turns fragments on and off globally
+				fragments: true,
+				// Flags if the presentation is running in an embedded mode,
+				// i.e. contained within a limited portion of the screen
+				embedded: false,
+				// Flags if we should show a help overlay when the questionmark
+				// key is pressed
+				help: false,
+				// Flags if speaker notes should be visible to all viewers
+				showNotes: false,
+				// Global override for autolaying embedded media (video/audio/iframe)
+				// - null: Media will only autoplay if data-autoplay is present
+				// - true: All media will autoplay, regardless of individual setting
+				// - false: No media will autoplay, regardless of individual setting
+				autoPlayMedia: null,
+				// Number of milliseconds between automatically proceeding to the
+				// next slide, disabled when set to 0, this value can be overwritten
+				// by using a data-autoslide attribute on your slides
+				autoSlide: 0,
+				// Stop auto-sliding after user input
+				autoSlideStoppable: true,
+				// Use this method for navigation when auto-sliding
+				autoSlideMethod: Reveal.navigateNext,
+				// Enable slide navigation via mouse wheel
+				mouseWheel: false,
+				// Hides the address bar on mobile devices
+				hideAddressBar: true,
+				// Opens links in an iframe preview overlay
+				previewLinks: false,
+				// Transition style
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// Transition speed
+				transitionSpeed: 'default', // default/fast/slow
+				// Transition style for full page slide backgrounds
+				backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+				// Number of slides away from the current that are visible
+				viewDistance: 3,
+				// Parallax background image
+				parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+				// Parallax background size
+				parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+				// Number of pixels to move the parallax background per slide
+				// - Calculated automatically unless specified
+				// - Set to 0 to disable movement along an axis
+				parallaxBackgroundHorizontal: null,
+				parallaxBackgroundVertical: null,
+				// The display mode that will be used to show slides
+				display: 'block',
+				dependencies: [
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				if (!cloudInit && event.currentSlide.id === "tools-concepts") {
+					initCloud();
+					cloudInit = true;
+				}
+				/*if (event.currentSlide.id === "cover") {
+					$("#footer").show();
+				} else {
+					$("#footer").hide();
+				}*/
+			} );
+		</script>
+	</body>
+</html>
