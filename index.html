@@ -773,15 +773,78 @@
 				</section>
 
 				<section id="ci-cd">
-					<h3>Continuous Integration<br/>Continuous Deployment</h3>
-					<ul>
-						<li>Automate process through whole pipeline</li>
-						<li>Build and test</li>
-						<li>Generate feedback</li>
-						<li>Deploy</li>
-						<li>Generate feedback</li>
-						<li>Long run objective</li>
-					</ul>
+					<h3>Continuous Integration/Delivery/Deployment</h3>
+
+					<svg width="1200" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+						<polygon points="0 210 120 210 130 250 120 290 0 290 10 250" stroke="transparent" fill="#159dff"></polygon>
+						<line x1="60" y1="80" x2="160" y2="80" style="stroke:#159dff;stroke-width:2"></line>
+						<line x1="60" y1="190" x2="60" y2="80" style="stroke:#159dff;stroke-width:2"></line>
+						<circle cx="60" cy="190" r="6" stroke="transparent" fill="#159dff"></circle>
+						<text x="105" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Code</text>
+
+						<polygon points="150 210 270 210 280 250 270 290 150 290 160 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="210" y1="420" x2="70" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="210" y1="310" x2="210" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="210" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="140" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Unit tests</text>
+
+						<polygon points="300 210 420 210 430 250 420 290 300 290 310 250" stroke="transparent" fill="#90be4f"></polygon>
+						<line x1="360" y1="80" x2="460" y2="80" style="stroke:#90be4f;stroke-width:2"></line>
+						<line x1="360" y1="190" x2="360" y2="80" style="stroke:#90be4f;stroke-width:2"></line>
+						<circle cx="360" cy="190" r="6" stroke="transparent" fill="#90be4f"></circle>
+						<text x="405" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Build</text>
+
+						<polygon points="450 210 570 210 580 250 570 290 450 290 460 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="510" y1="420" x2="290" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="510" y1="310" x2="510" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="510" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="400" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Integration tests</text>
+
+						<polygon points="600 210 720 210 730 250 720 290 600 290 610 250" stroke="transparent" fill="#9249c9"></polygon>
+						<line x1="660" y1="80" x2="900" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<line x1="660" y1="190" x2="660" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<circle cx="660" cy="190" r="6" stroke="transparent" fill="#9249c9"></circle>
+						<text x="775" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Deploy to staging</text>
+
+						<polygon points="750 210 870 210 880 250 870 290 750 290 760 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="810" y1="420" x2="580" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="810" y1="310" x2="810" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="810" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="695" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Acceptance tests</text>
+
+						<polygon points="900 210 1020 210 1030 250 1020 290 900 290 910 250" stroke="transparent" fill="#9249c9"></polygon>
+						<line x1="960" y1="80" x2="1200" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<line x1="960" y1="190" x2="960" y2="80" style="stroke:#9249c9;stroke-width:2"></line>
+						<circle cx="960" cy="190" r="6" stroke="transparent" fill="#9249c9"></circle>
+						<text x="1075" y="70" text-anchor="middle" font-size="30" fill="#eeeeee">Deploy to prod</text>
+
+						<polygon points="1050 210 1170 210 1180 250 1170 290 1050 290 1060 250" stroke="transparent" fill="#d84c2d"></polygon>
+						<line x1="1110" y1="420" x2="880" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<line x1="1110" y1="310" x2="1110" y2="420" style="stroke:#d84c2d;stroke-width:2"></line>
+						<circle cx="1110" cy="310" r="6" stroke="transparent" fill="#d84c2d"></circle>
+						<text x="995" y="450" text-anchor="middle" font-size="30" fill="#eeeeee">Production tests</text>
+
+						<!-- integration -->
+						<polygon class="fragment" data-fragment-index="1" points="90 230 180 230 190 250 180 270 90 270 100 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="1" points="240 230 330 230 340 250 330 270 240 270 250 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="1" points="390 230 480 230 490 250 480 270 390 270 400 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="540 230 630 230 640 250 630 270 540 270 550 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="690 230 780 230 790 250 780 270 690 270 700 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="840 230 930 230 940 250 930 270 840 270 850 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+						<polygon class="fragment" data-fragment-index="2" points="990 230 1080 230 1090 250 1080 270 990 270 1000 250" stroke="#111111" stroke-width="3" fill="#cc2222"></polygon>
+
+						<!-- delivery -->
+						<polygon class="fragment" data-fragment-index="3" points="540 230 630 230 640 250 630 270 540 270 550 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="3" points="690 230 780 230 790 250 780 270 690 270 700 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+
+						<!-- deployment -->
+						<polygon class="fragment" data-fragment-index="4" points="840 230 930 230 940 250 930 270 840 270 850 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+						<polygon class="fragment" data-fragment-index="4" points="990 230 1080 230 1090 250 1080 270 990 270 1000 250" stroke="#111111" stroke-width="3" fill="#22cc22"></polygon>
+
+
+					</svg>
+
+
 					<aside class="notes">
 						Take Github example : they can FIX an issue in prod in 25 minutes (fix not rollbacked)<br/>
 						Every developer can impact production but is also responsible<br/>
@@ -861,12 +924,12 @@
 
 				<section id="microservices">
 					<h3>Microservices</h3>
-
 					<ul>
-						<li>For big projects</li>
-						<li>Evolution</li>
-						<li>Scalability</li>
+						<li>Modular approach</li>
+						<li>Enforces CD & Monitoring</li>
+						<li>Scalabile</li>
 						<li>Mixed technologies</li>
+						<li>Fine grain (deploy, management ...)</li>
 					</ul>
 					<aside class="notes">
 						It is complex and might be difficult for new members or the team (and actual team too)
@@ -875,90 +938,6 @@
 
 				<section id="no-silver-bullet">
 					<i>There is no Silver Bullet</i>
-				</section>
-
-				<section id="flow-example">
-					<h3 style="margin-bottom: 10px">Some tools</h3>
-
-					<div style="position:relative;">
-
-						<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:220px; padding-top:10px; ">
-							<div class="fragment" data-fragment-index="1" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="git" src="./assets/git.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="mercurial" src="./assets/mercurial.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="2" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="junit" src="./assets/junit.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="selenium" src="./assets/selenium.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="3" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="artifactory" src="./assets/artifactory.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="nexus" src="./assets/nexus.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="4" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="ansible" src="./assets/ansible.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="puppet" src="./assets/puppet.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="5" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="vagrant" src="./assets/vagrant.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="docker" src="./assets/docker.png" style="margin:2px auto; display: block; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="6" style="float:left; width:196px; height:220px; position:relative; display:flex; flex-direction:column-reverse;">
-								<img id="elastic" src="./assets/elastic.png" style="margin:2px auto; display: block; background: none; width: 80px; border:none; box-shadow:none" />
-							</div>
-						</div>
-
-						<div style="width:1200px; height:100px; padding-top:10px; ">
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#159dff" stroke-width="5"></polygon>
-								<text x="44" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CREATE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#d84c2d" stroke-width="5"></polygon>
-								<text x="49" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >VERIFY</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#90be4f" stroke-width="5"></polygon>
-								<text x="34" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >PACKAGE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#9249c9" stroke-width="5"></polygon>
-								<text x="36" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >RELEASE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ff2626" stroke-width="5"></polygon>
-								<text x="20" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >CONFIGURE</text>
-							</svg>
-							<svg width="185" height="90" version="1.1" xmlns="http://www.w3.org/2000/svg">
-								<polygon points="0 0 165 0 185 45 165 90 0 90 15 45" stroke="transparent" fill="#ffc715" stroke-width="5"></polygon>
-								<text x="31" y="55" font-family="Source Sans Pro" font-size="30" fill="#eeeeee" font-weight="bold" >MONITOR</text>
-							</svg>
-						</div>
-
-						<div style="position:relative;font-size:0.6em;text-align:left;width:1200px; height:110px; padding-top:10px; ">
-							<div class="fragment" data-fragment-index="7" style="float:left; width:398; height:110px; position:relative; text-align: center;">
-								<img id="gitlab" src="./assets/gitlab.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="bitbucket" src="./assets/bitbucket.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="github" src="./assets/github.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-							<div class="fragment" data-fragment-index="7" style="float:left;width:196px; height:110px;position:relative">
-							</div>
-							<div class="fragment" data-fragment-index="8" style="float:left; width:597px; height:110px; position:relative; text-align: center;">
-								<img id="rancher" src="./assets/rancher.png" style="margin:2px auto; background: none; height: 80px; border:none; box-shadow:none" />
-								<img id="kubernetes" src="./assets/kubernetes.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-								<img id="docker-swarm" src="./assets/docker-swarm.png" style="margin:2px auto; background: none; width: 80px; height: 80px; border:none; box-shadow:none" />
-							</div>
-						</div>
-						<div class="fragment" data-fragment-index="9" style="position:relative;width:1200px; height:110px; background-color: #888; text-align: center; ">
-							<img id="jenkins" src="./assets/jenkins.png" style="margin:2px auto; background: none; height: 110px; border:none; box-shadow:none" />
-						</div>
-
-					</div>
-
-					<aside class="notes">
-						example to show chaining of tools <br/>
-						again, not exhaustive, may not apply (entirely) to you
-					</aside>
 				</section>
 
 				<section id="tldl" data-timing="10">
@@ -1051,12 +1030,12 @@
 					<h4 style="padding-bottom: 40px;">Sources</h4>
 					<ul style="list-style-type: none; font-size: 40px;">
 						<li><a href="http://www.jedi.be/">Jedi.be</a></li>
+						<li><a href="https://www.infoq.com/fr/presentations/continuous-delivery-github-alain-helaili">InfoQ - Alain Hélaïli</a></li>
 						<li><a href="https://theagileadmin.com/what-is-devops/">The agile admin</a></li>
 						<li><a href="http://www.lemagit.fr/definition/DevOps">Le Mag IT</a></li>
 						<li><a href="http://blog.octo.com/devops/">Octo Blog</a></li>
 						<li><a href="https://www.flickr.com/">flickr</a></li>
 						<li><a href="https://aws.amazon.com">AWS Amazon</a></li>
-						<li><a href="https://www.atlassian.com/">Atlassian</a></li>
 						<li>...</li>
 					</ul>
 				</section>
